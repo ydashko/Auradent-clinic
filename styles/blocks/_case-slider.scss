@@ -1,0 +1,76 @@
+@use "../helpers" as *;
+
+.cases-slider {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.cases-slider__viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.cases-slider__track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.case-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.case-image {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.case-image img {
+  width: 100%;
+  display: block;
+}
+
+.case-image__label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.cases-slider__info {
+  margin-top: 24px;
+}
+
+.cases-slider__controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  background: transparent;
+  color: var(--color-gold);
+  font-size: 20px;
+}
+
+// .fade-text {
+//   transition:
+//     opacity 0.25s ease,
+//     transform 0.25s ease;
+// }
+
+// .fade-text.is-hidden {
+//   opacity: 0;
+//   transform: translateY(6px);
+// }

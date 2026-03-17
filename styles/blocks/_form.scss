@@ -1,0 +1,396 @@
+@use "../helpers" as *;
+
+.form {
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  min-height: 550px;
+  margin-bottom: 140px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    @include fluid-text(90, 26);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -4%;
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    // display: flex;
+    // // justify-content: center;
+    // height: 100%;
+    gap: 24px;
+
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    // width: 100%;
+    align-items: stretch;
+
+    @include tablet {
+      grid-template-columns: 235px 1fr;
+      gap: 16px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    // max-width: 427px;
+    // max-height: 529px;
+    width: 420px;
+    // width: 100%;
+    // max-height: 529px;
+    height: 100%;
+    // object-fit: contain;
+
+    border-radius: 5px;
+    // flex-grow: 1;
+    // object-fit: cover;
+
+    @include tablet {
+      object-fit: cover;
+      width: 235px;
+    }
+  }
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  // height: 100%;
+  // background: #fff;
+
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  // align-self: center;
+}
+
+// .appointment-form input,
+// .appointment-form textarea,
+// .appointment-form .doctor-select {
+//   width: 100%;
+//   padding: 12px;
+//   margin-bottom: 16px;
+//   border-radius: 6px;
+//   border: 1px solid #ccc;
+//   font-size: 16px;
+//   box-sizing: border-box;
+// }
+
+.appointment-form textarea {
+  // resize: vertical;
+  resize: none;
+  // height: auto;
+  height: 50px;
+  overflow: hidden;
+}
+
+// .appointment-form button {
+//   width: 100%;
+//   // padding: 14px;
+//   // background: #007bff;
+//   // color: #fff;
+//   // font-size: 16px;
+//   // border: none;
+//   // border-radius: 8px;
+//   // cursor: pointer;
+//   // transition: 0.3s;
+
+//   display: inline-block;
+//   // background: transparent;
+//   background-color: var(--color-gold);
+//   color: #000;
+//   border: 2px solid var(--accent);
+//   padding: 10px 24px;
+//   // color: var(--accent);
+//   border-radius: 40px;
+//   cursor: pointer;
+//   font-weight: 600;
+
+//   //toggle
+//   // background: transparent;
+// }
+
+// .appointment-form button:hover {
+//   background: transparent;
+//   // background-color: var(--color-gold);
+//   // color: #000;
+//   color: var(--color-white);
+// }
+
+.form__btn--secondary {
+  margin-top: 40px;
+
+  // width: 253px;
+  width: 100%;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  padding: 0 24px;
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-gold);
+  border-radius: 50px;
+
+  @include fluid-text(18, 14);
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  // margin-bottom: 92px;
+
+  @include tablet {
+    padding: 0 12px;
+    min-height: 50px;
+    // margin-bottom: 82px;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+
+  @include mobile {
+    // min-width: 218px;
+    width: 100%;
+    min-height: 44px;
+    // margin-bottom: 39px;
+  }
+  //old
+}
+
+.form__btn--secondary:hover {
+  color: var(--color-gold);
+  background: none;
+}
+
+/* Кастомний випадаючий список */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown .options div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown .options div:hover {
+  background: #f0f0f0;
+}
+input {
+  @include fluid-text(18, 14);
+}
+
+input,
+textarea,
+select {
+  @include fluid-text(18, 14);
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-grey30);
+  color: var(--color-white);
+  font-family: "Inter";
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-gold);
+  }
+
+  // &:invalid {
+  //   outline: none;
+  //   border-color: var(--color-eror);
+  // }
+}
+
+label {
+  @include fluid-text(24, 18);
+  display: block;
+  margin-bottom: 4px;
+  // font-size: 14px;
+  color: var(--color-white);
+}
+
+option {
+  color: var(--color-grey30);
+}
+
+.form__privacy {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--color-grey30);
+  line-height: 1.4;
+
+  text-align: center;
+
+  a {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--color-gold);
+  }
+}
+
+.form__success {
+  display: none; // скрыто по умолчанию
+  height: 100%;
+  // background: #4b4b4b; // как на скрине
+  color: #fff;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 40px;
+}
+
+.success-icon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(244, 184, 96, 0.25);
+  // animation: pulse 2s infinite ease-in-out;
+}
+
+.ring-1 {
+  width: 120px;
+  height: 120px;
+  left: 0px;
+}
+
+.ring-2 {
+  width: 90px;
+  height: 90px;
+  top: 15px;
+  left: 15px;
+}
+
+.ring-3 {
+  width: 60px;
+  height: 60px;
+  top: 30px;
+  left: 30px;
+}
+
+.checkmark {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 30px;
+  left: 30px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-text {
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.appointment-form.hide {
+  display: none;
+}
+
+.form__success {
+  display: none;
+}
+
+.form__success.show {
+  display: flex;
+}
+
+/* Исходное состояние для всех элементов */
+.form__title,
+.form__image,
+.appointment-form,
+.form__success {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* Класс для включения анимации */
+.is-animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Можно задать индивидуальные задержки через CSS-переменные или JS */
+.form__title.is-animated {
+  transition-delay: 0s;
+}
+
+.form__image.is-animated {
+  transition-delay: 0.2s;
+}
+
+.appointment-form.is-animated {
+  transition-delay: 0.4s;
+}

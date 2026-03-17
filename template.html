@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header secondary-page">
+      <div class="container">
+        <div class="header__top">
+          <a href="./index.html" class="logo"
+            ><img src="images/logo.svg" alt="Auradent logo"
+          /></a>
+          <nav class="menu menu--header">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="./index.html" class="menu__link">Головна</a>
+              </li>
+              <li class="menu__item">
+                <a href="./about.html" class="menu__link">Про Клініку</a>
+              </li>
+              <li class="menu__item">
+                <a href="./team.html" class="menu__link">Команда</a>
+              </li>
+              <li class="menu__item">
+                <a href="./price.html" class="menu__link">Ціни</a>
+              </li>
+              <li class="menu__item">
+                <a href="./contacts.html" class="menu__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+380939800398" class="header__phone hidden-tablet">+380 93 980 0398</a>
+
+          <button class="button__burger-menu burger-button visible-tablet" type="button"
+          onclick="tabletOverlay.showModal()">
+            <div class="span visually-hidden">Open navigation menu</div>
+
+
+          </button>
+        </div>
+        <!-- add class tablet-hidden-->
+        <div class="header__info">
+          <p class="header__address">бул. Миколи Руденка, 14Е, Київ</p>
+          <p class="header__hours">
+            Понеділок - П’ятниця: 9:00-20:00<br />
+            Субота - Неділя: 10:00-18:00
+          </p>
+        </div>
+
+          </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+        <nav aria-label="Breadcrumb">
+              <ol class="breadcrumbs">
+                <li>
+                  <a href="/">Головна</a>
+                </li>
+                <li aria-current="page">
+                  Команда
+                </li>
+              </ol>
+            </nav>
+        </div>
+
+        <section class="doctors doctors--static">
+          <div class="doctors__container container">
+            
+            <h2 class="doctors__title animate-on-scroll">
+            <span class="doctors__line-top">Сила нашої клініки -</span>
+            <span class="doctors__line-bot word-accent">в команді</span>
+          </h2>
+            <div class="doctors__slider">
+
+    <div class="doctors__track">
+      <!-- Doctor 2 -->
+      <div class="doctor-card doctor-card--first animate-on-scroll">
+
+        <div class="doctor-card__main">
+
+    <div class="doctor-card__name-block">
+      <h2 class="doctor-card__name">
+        Сніжко Владислав Олександрович
+      </h2>
+    </div>
+
+    <div class="doctor-card__content">
+      <div class="doctor-card__position">
+        Головний лікар, лікар-ортодонт, ортопед, хірург-імплантолог
+      </div>
+
+      <p class="doctor-card__text">
+        “Постійне вдосконалення та відданість роботі спонукають мене виконувати свою справу на найвищому рівні. Я люблю контролювати кожен етап лікування не лише своїх пацієнтів, а й пацієнтів інших лікарів. Бачити задоволеного пацієнта для мене - головний стимул працювати та постійно вдосконалюватися.”
+      </p>
+
+      <button class="doctor-card__toggle">
+        Дізнатись більше
+      </button>
+    </div>
+
+    <div class="doctor-card__photo">
+      <img src="/images/d1/d1.webp" alt="">
+    </div>
+
+  </div>
+
+        <div class="doctor-card__expand">
+          <div class="doctor-card__expand-inner">
+            <!-- <div class="doctor-card__expand-top"> -->
+              <h3 class="doctor-card__title">Освіта</h3>
+              <div class="doctor-card__description">
+                      <p>
+                        2013–2018 — Національний медичний університет імені О.О.
+                        Богомольця
+                      </p>
+
+                      <p>2018–2020 — отримав звання лікаря-спеціаліста</p>
+
+                      <p>Спеціалізація:</p>
+                      <ul>
+                        <li>Ортодонтична стоматологія</li>
+                        <li>Імплантологія та хірургічна стоматологія</li>
+                        <li>Керамічні реставрації</li>
+                        <li>
+                          Функціональне відновлення жувальної ефективності
+                        </li>
+                      </ul>
+
+                      <p>Курси та семінари:</p>
+                      <ul>
+                        <li>Ортодонтична резидентура — Нуртдинов І. Р.</li>
+                        <li>
+                          Атравматичне видалення зубів мудрості — Олександр
+                          Кожарін
+                        </li>
+                        <li>Практична імплантація — Куцяк Роман Андрійович</li>
+                        <li>Первинна ендодонтія — Ігор Ноєнко</li>
+                        <li>Build-up</li>
+                        <li>Базова підтримка життя (BLS)</li>
+                      </ul>
+                    </div>
+            <!-- </div> -->
+            <!-- <div class="doctor-card__expand-bottom"> -->
+              
+            <!-- </div> -->
+          </div>
+          <div class="works animate-on-scroll">
+          <div class="works__top">
+
+          <h3 class="works__header">Приклади моїх робіт</h3>
+
+          <div class="works__controls">
+
+              <button class="works__btn works__btn--prev" disabled>
+                <svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+              </button>
+
+              <button class="works__btn works__btn--next">
+                <svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+              </button>
+
+          </div>
+          </div>
+          <!-- </div> -->
+          
+              <!-- <div class="works"> -->
+          <div class="works__slider">
+            <div class="works__track">
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w1.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w1.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Естетичне відновлення фронтальної групи зубів керамічними вінірами.
+                </h3>
+                <p class="works__doctor">
+                  Лікар: Сніжко Владислав Олександрович
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w2.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w2.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Переліковування кореневих каналів.
+                </h3>
+                <p class="works__doctor">
+                  Лікар: Сніжко Владислав Олександрович
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w3.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w3.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Тотальне естетичне відновлення зубних рядів керамічними реставраціями.
+                </h3>
+                <p class="works__doctor">
+                  Лікар: Сніжко Владислав Олександрович
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w4.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w4.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Імплантація в ділянці зуба 46 зуба.
+                </h3>
+                <p class="works__doctor">
+                  Лікар: Сніжко Владислав Олександрович
+                </p>
+              </div>
+              
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w5.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d1/d1w5.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Ортодонтичне лікування, незнімним апаратом
+                </h3>
+                <p class="works__doctor">
+                  Лікар: Сніжко Владислав Олександрович
+                </p>
+              </div>
+
+            </div>
+
+            <!-- <div class="works__controls">
+              <button class="works__btn works__btn--prev" disabled><svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg></button>
+              <button class="works__btn works__btn--next"><svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg></button>
+            </div> -->
+          </div>
+              </div>
+              <!-- </div> -->
+        </div>
+
+      </div>
+
+      <div class="doctor-card animate-on-scroll">
+
+        <div class="doctor-card__main">
+
+    <div class="doctor-card__name-block">
+      <h2 class="doctor-card__name">
+        Лясковець Марія Юріївна
+      </h2>
+    </div>
+
+    <div class="doctor-card__content">
+      <div class="doctor-card__position">
+        Лікар-стоматолог, пародонтолог, хірург.
+      </div>
+
+      <p class="doctor-card__text">
+        Напрями роботи: пародонтологія, хірургічна пародонтологія, імплантація, аугментація кісткової тканини, видалення зубів, клінічне видовження зубів
+      </p>
+
+      <button class="doctor-card__toggle">
+        Дізнатись більше
+      </button>
+    </div>
+
+    <div class="doctor-card__photo">
+      <img src="./images/d2/d2.webp" alt="">
+    </div>
+
+  </div>
+
+        <div class="doctor-card__expand">
+          <div class="doctor-card__expand-inner">
+            <!-- <div class="doctor-card__expand-top"> -->
+              <h3 class="doctor-card__title">Освіта</h3>
+              <div class="doctor-card__description">
+                      <p>
+                        Я навчалася у Львівському національному медичному
+                        університеті імені Данила Галицького за спеціальністю
+                        стоматологія.
+                      </p>
+
+                      <p>
+                        Після цього пройшла інтернатуру та спеціалізацію з
+                        хірургічної стоматології у Національному медичному
+                        університеті імені О. О. Богомольця.
+                      </p>
+
+                      <p>Участь у курсах та семінарах:</p>
+
+                      <ul>
+                        <li>
+                          02.10.2022 — Вебінар “Захворювання слизової оболонки
+                          порожнини рота. Клінічні випадки”
+                        </li>
+                        <li>21.10.2022 — Майстер-клас «Професійна гігієна»</li>
+                        <li>
+                          02.09.2023 — Майстер-клас «Пародонтальна хірургія.
+                          Резекція та регенерація»
+                        </li>
+                        <li>
+                          01.12.2023 — Конгрес Implants 2023, Періо секція
+                        </li>
+                        <li>
+                          06.04.2024 — «Рецесія. Легкий старт та прогнозований
+                          фініш»
+                        </li>
+                        <li>
+                          19.04.2024 — Системний підхід до лікування пацієнтів
+                          із захворюваннями пародонту
+                        </li>
+                        <li>
+                          10–12.10.2024 — Конгрес «Пародонтологія та імплантація
+                          – синергія чи антагонізм?»
+                        </li>
+                        <li>20–21.06.2025 — «Синус-ліфтинг без компромісів»</li>
+                        <li>2024–2025 — Учасник ITI-perio</li>
+                        <li>
+                          02.06.2025 — «Базові реанімаційні заходи для дорослих»
+                        </li>
+                        <li>Конгрес «White Summer Forum 2025»</li>
+                      </ul>
+                    </div>
+            <!-- </div> -->
+            <!-- <div class="doctor-card__expand-bottom"> -->
+              
+            <!-- </div> -->
+          </div>
+          <div class="works animate-on-scroll">
+          <div class="works__top">
+
+          <h3 class="works__header">Приклади моїх робіт</h3>
+
+          <div class="works__controls">
+
+              <button class="works__btn works__btn--prev" disabled>
+                <svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+              </button>
+
+              <button class="works__btn works__btn--next">
+                <svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+              </button>
+
+          </div>
+          </div>
+          <!-- </div> -->
+          
+              <!-- <div class="works"> -->
+          <div class="works__slider">
+            <div class="works__track">
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w1.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w1.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Корекція рецесії ясен
+                </h3>
+                <p class="works__doctor">
+                  Лікар:
+Лясковець Марія Юріївна
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w2.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w2.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Корекція рецесії ясен
+                </h3>
+                <p class="works__doctor">
+                  Лікар:
+Лясковець Марія Юріївна
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w3.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w3.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Хірургічне лікування рецесії ясен
+                </h3>
+                <p class="works__doctor">
+                  Лікар:
+Лясковець Марія Юріївна
+                </p>
+              </div>
+
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w4.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w4.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Професійна гігієна порожнини рота
+                </h3>
+                <p class="works__doctor">
+                  Лікар:
+Лясковець Марія Юріївна
+                </p>
+              </div>
+              
+              <div class="works__slide">
+                <div class="works__images">
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w5.1.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--left">До</span>
+                  </div>
+                  <div class="works__image">
+                    <img
+                      src="./images/d2/d2w5.2.webp"
+                      alt=""
+                    />
+
+                    <span class="works__badge--right">Після</span>
+                  </div>
+                </div>
+
+                <h3 class="works__title">
+                  Імплантація в ділянці зуба 26 зуба.
+                </h3>
+                <p class="works__doctor">
+                  Лікар:
+Лясковець Марія Юріївна
+                </p>
+              </div>
+
+            </div>
+
+            <!-- <div class="works__controls">
+              <button class="works__btn works__btn--prev" disabled><svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg></button>
+              <button class="works__btn works__btn--next"><svg viewBox="0 0 23 19">
+    <path
+      d="M13 0.75L21.75 9.5M21.75 9.5L13 18.25M21.75 9.5H0.75"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg></button>
+            </div> -->
+          </div>
+              </div>
+              <!-- </div> -->
+        </div>
+
+      </div>
+    <!-- da1-3 + a -->
+    <div class="doctor-card animate-on-scroll">
+      <div class="doctor-card__main">
+        <div class="doctor-card__name-block">
+          <h2 class="doctor-card__name">
+            Рогульчик Марія Володимирівна
+          </h2>
+        </div>
+
+        <div class="doctor-card__content">
+          <div class="doctor-card__position">
+            Асистент, лікар гігієніст
+          </div>
+
+          <p class="doctor-card__text">
+            Я - асистент стоматолога, який забезпечує комфорт пацієнтів під час процедур та спеціалізується на професійній гігієні ротової порожнини. У роботі поєдную сучасні методики, уважне ставлення та щиру турботу про кожного пацієнта, пояснюючи всі етапи процедури. Також навчаю індивідуальної гігієни порожнини рота.Навчаюся в Національному медичному університеті імені О. О. Богомольця та постійно вдосконалюю професійні знання.
+          </p>
+        </div>
+
+        <div class="doctor-card__photo">
+          <img src="./images/d/da1.webp" alt="">
+        </div>
+      </div>
+        <div class="doctor-card__expand">
+        </div>
+    </div>
+
+    <div class="doctor-card animate-on-scroll">
+      <div class="doctor-card__main">
+        <div class="doctor-card__name-block">
+          <h2 class="doctor-card__name">
+            Головань Лілія Олександрівна
+          </h2>
+        </div>
+
+        <div class="doctor-card__content">
+          <div class="doctor-card__position">
+            Асистент стоматолога
+          </div>
+
+          <p class="doctor-card__text">
+            Понад 2 роки працюю асистентом стоматолога та гігієністом.
+Закінчила Конотопське медичне училище 
+за спеціальністю «Лікувальна справа».
+Люблю стоматологію за можливість допомагати людям і створювати для пацієнтів комфорт 
+під час лікування. Наразі здобуваю вищу освіту за спеціальністю «Психологія», що допомагає мені краще розуміти пацієнтів і знаходити індивідуальний підхід до кожного.
+          </p>
+        </div>
+
+        <div class="doctor-card__photo">
+          <img src="./images/d/da2.webp" alt="">
+        </div>
+      </div>
+        <div class="doctor-card__expand">
+        </div>
+    </div>
+    
+
+    </div>
+
+    <div class="doctors__controls">
+      <button class="doctors__btn doctors__btn--prev">←</button>
+      <button class="doctors__btn doctors__btn--next">→</button>
+    </div>
+
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+        <a href="#" class="error__logo"
+          ><img src="images/logo-footer.svg" alt="Auradent logo"
+        /></a>
+
+        <div class="footer__text">
+          Сучасна стоматологія з турботою про ваше здоров’я та комфорт.
+        </div>
+        <div class="footer__inner">
+          <div class="footer__contacts">
+            <div class="footer__plaque">
+              <span class="footer__title">Адреса:</span>
+              <span class="footer__info">бул. Миколи Руденка, 14Е, Київ</span>
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Телефон:</span>
+              <span class="footer__info"
+                ><a href="tel:+380939800398" class="footer__phone"
+                  >+380 93 980 0398</a
+                ></span
+              >
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Email:</span>
+              <span class="footer__info"><a href="mailto:auradentkyiv@gmail.com">auradentkyiv@gmail.com</a></span>
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Графік роботи:</span>
+              <span class="footer__info">
+                Понеділок - П’ятниця: 9:00-20:00<br />
+                Субота - Неділя: 10:00-18:00
+              </span>
+            </div>
+          </div>
+
+          <div class="footer__menu">
+            <nav class="menu menu--footer">
+              <ul class="menu__list--footer">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Головна</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Про Клініку</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Команда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Ціни</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__extra extra">
+            <div class="extra__top">
+              <div class="extra__title">Ми в соцмережах:</div>
+              <div class="extra__soc1als">
+                <a href="#" class="extra__icon--left"
+                  ><img src="icons/icon-instagram.svg" alt="instagram icon" /></a
+                ><a href="#" class="extra__icon--right"
+                  ><img src="icons/icon-facebook.svg" alt="facebook icon"
+                /></a>
+              </div>
+            </div>
+            <div class="extra__bottom">
+              <span class="extra__text">© 2025 AURADENT</span>
+              <span class="extra__text">Усі права захищені.</span>
+              <span class="extra__text">Політика конфіденційності</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <dialog 
+      class="tablet-overlay visible-tablet" 
+      id="tabletOverlay"
+    >
+    <footer class="footer">
+      <div class="container">
+        <a href="#" class="error__logo">
+          <img src="images/logo-footer.svg" alt="Auradent logo" />
+        </a>
+
+        <div class="footer__text">
+          Сучасна стоматологія з турботою про ваше здоров’я та комфорт.
+        </div>
+        <div class="footer__inner">
+          <div class="footer__contacts">
+            <div class="footer__plaque">
+              <span class="footer__title">Адреса:</span>
+              <span class="footer__info">бул. Миколи Руденка, 14Е, Київ</span>
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Телефон:</span>
+              <span class="footer__info"
+                ><a href="tel:+380939800398" class="footer__phone">
+                  +380 93 980 0398
+                </a>
+              </span>
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Email:</span>
+              <span class="footer__info"
+                ><a href="mailto:auradentkyiv@gmail.com"
+                  >auradentkyiv@gmail.com</a
+                ></span
+              >
+            </div>
+
+            <div class="footer__plaque">
+              <span class="footer__title">Графік роботи:</span>
+              <span class="footer__info">
+                Понеділок - П’ятниця: 9:00-20:00<br />
+                Субота - Неділя: 10:00-18:00
+              </span>
+            </div>
+          </div>
+
+          <div class="footer__menu">
+            <nav class="menu--footer">
+              <ul class="menu__list--footer">
+                <li class="menu__item">
+                  <a href="./index.html" class="menu--footer__link">Головна</a>
+                </li>
+                <li class="menu__item">
+                  <a href="./about.html" class="menu--footer__link"
+                    >Про Клініку</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="./team.html" class="menu--footer__link">Команда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="./price.html" class="menu--footer__link">Ціни</a>
+                </li>
+                <li class="menu__item">
+                  <a href="./contacts.html" class="menu--footer__link"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__extra extra">
+            <div class="extra__top">
+              <div class="extra__title">Ми в соцмережах:</div>
+              <div class="extra__soc1als">
+                <a
+                  href="https://www.instagram.com/auradentkyiv/"
+                  class="extra__icon--left"
+                  ><img
+                    src="icons/icon-instagram.svg"
+                    alt="instagram icon" /></a
+                ><a
+                  href="https://www.facebook.com/p/%D0%A1%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%8F-AURA-dent-100094726132971/"
+                  class="extra__icon--right"
+                  ><img src="icons/icon-facebook.svg" alt="facebook icon"
+                /></a>
+              </div>
+            </div>
+            <div class="extra__bottom">
+              <span class="extra__text">© 2025 AURADENT</span>
+              <span class="extra__text">Усі права захищені.</span>
+              <span class="extra__text policy-link"
+                ><a href="./policy.html">Політика конфіденційності</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="tablet-overlay__body">
+      <ul class="tablet-overlay__list">
+        <li class="tablet-overlay__item">
+          <a href="" class="tablet-overlay__link">Головна</a>
+        </li>
+
+        <li class="tablet-overlay__item">
+          <a href="" class="tablet-overlay__link">Про Клініку</a>
+        </li>
+
+        <li class="tablet-overlay__item">
+          <a href="" class="tablet-overlay__link">Команда</a>
+        </li>
+
+        <li class="tablet-overlay__item">
+          <a href="" class="tablet-overlay__link">Ціни</a>
+        </li>
+
+        <li class="tablet-overlay__item">
+          <a href="" class="tablet-overlay__link">Контакти</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tablet-overlay__footer">
+    <span class="tablet-overlay__title">Адреса:</span>
+    <span class="tablet-overlay__info">бул. Миколи Руденка, 14Е, Київ</span>
+
+    <span class="tablet-overlay__title">Графік роботи:</span>
+    <span class="tablet-overlay__info">
+      Понеділок - П’ятниця: 9:00-20:00<br />
+      Субота - Неділя: 10:00-18:00
+    </span>
+    
+    <span class="tablet-overlay__title">Телефон:</span>
+    <a href="tel:+380939800398" class="tablet-overlay__info">+380 93 980 0398</a>
+  </div>
+  </dialog>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@use "../helpers/" as *;
+
+.burger-button {
+  @include reset-button;
+  @include square(44px);
+  background: none;
+  color: var(--color-white);
+
+  position: relative;
+
+  &::after {
+    @include abs-center;
+
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow:
+      0 -8px,
+      0 8px;
+  }
+
+  @include hover {
+    &::after {
+      background-color: var(--color-gold);
+      box-shadow:
+        0 -8px var(--color-gold),
+        0 8px var(--color-gold);
+    }
+  }
+}

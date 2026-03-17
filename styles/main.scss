@@ -1,0 +1,28 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "blocks/header";
+@use "blocks/faq";
+@use "blocks/menu";
+@use "blocks/logo";
+@use "blocks/trust";
+@use "blocks/services";
+@use "blocks/reviews";
+@use "blocks/team";
+@use "blocks/footer";
+@use "blocks/case-slider";
+@use "blocks/form";
+@use "blocks/works";
+@use "blocks/about";
+
+@use "blocks/error";
+@use "blocks/contacts";
+@use "blocks/price";
+@use "blocks/policy";
+
+@use "blocks/burger-button";
+@use "blocks/_tablet-overlay";
+@use "blocks/cross-button";

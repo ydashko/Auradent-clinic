@@ -1,0 +1,27 @@
+@use "../helpers/" as *;
+
+.policy {
+  &__title {
+    @include fluid-text(90, 26);
+    line-height: 1.1;
+  }
+  &__text {
+    margin-bottom: 140px;
+
+    @include tablet {
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+section > p > a {
+  color: var(--color-gold);
+
+  &:hover {
+    color: var(--color-gold-accent);
+  }
+}

@@ -1,0 +1,129 @@
+@use "../helpers/" as *;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include fluid-text(40, 20);
+    margin-top: 140px;
+    margin-bottom: 48px;
+
+    @include tablet {
+      margin-top: 100px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-top: 70px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__image {
+    width: 478px;
+    height: 200px;
+    margin-bottom: 48px;
+
+    @include tablet {
+      width: 263px;
+      height: 132px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      width: 201px;
+      height: 96px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    overflow-wrap: break-word;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__logo {
+    width: 318px;
+    height: 82px;
+
+    @include tablet {
+      width: 256px;
+      height: 66px;
+    }
+
+    @include mobile {
+      width: 174px;
+      height: 45px;
+    }
+  }
+
+  &__btn--primary {
+    min-width: 276px;
+    min-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+    border: 2px solid var(--color-gold);
+    background-color: var(--color-gold);
+    border-radius: 50px;
+
+    @include fluid-text(18, 14);
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+
+    transition: 0.3s;
+    margin-bottom: 33px;
+
+    @include tablet {
+      min-width: 250px;
+      min-height: 50px;
+    }
+
+    @include mobile {
+      width: 100%;
+      min-height: 44px;
+    }
+  }
+
+  &__btn--primary::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+
+    background-color: currentColor;
+
+    mask: url("../../icons/arrow-bottom-right.svg") center/contain no-repeat;
+    -webkit-mask: url("../../icons/arrow-bottom-right.svg") center/contain
+      no-repeat;
+
+    transition: transform 0.3s ease;
+  }
+
+  .error__btn--primary:hover {
+    color: var(--color-gold);
+    background: none;
+  }
+
+  .error__btn--secondary:hover {
+    color: var(--color-gold);
+    background: none;
+  }
+
+  .error__btn--primary:hover::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.secondary-page {
+  background-image: none;
+}

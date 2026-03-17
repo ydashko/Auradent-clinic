@@ -1,0 +1,52 @@
+@use "helpers" as *;
+
+:root {
+  --color-gold: #ffcb74;
+  --color-gold-accent: #c99d57;
+
+  --color-grey: #86878d;
+  --color-grey80: #2f2f2f;
+  --color-grey60: #53545a;
+  --color-grey50: #5f6066;
+  --color-grey30: #86878d;
+  --color-grey20: #c7c7c7;
+  --color-grey10: #e1e1e2;
+  --color-grey9: #e1e1e2;
+
+  --color-white: #f6f6f6;
+
+  --color-background: #111111;
+
+  --color-error: #d32f2f;
+
+  --font-family-base: "Inter", sans-serif;
+
+  --container-width: #{rem(1320)};
+  --container-padding-x: #{rem(60)};
+
+  // @media (tablet) {
+  //   --container-padding-x: 32px; /* больше на мобильных */
+  // }
+
+  // @media (mobile) {
+  //   --container-padding-x: 16px; /* ещё аккуратнее */
+  // }
+
+  // @include tablet {
+  //   --container-width: #{rem(680)};
+  // }
+  // --transition-duration: 0.2s;
+}
+
+@include tablet {
+  :root {
+    --container-width: #{rem(680)};
+    --container-padding-x: #{rem(32)};
+  }
+}
+
+@include mobile {
+  :root {
+    --container-padding-x: #{rem(16)};
+  }
+}
