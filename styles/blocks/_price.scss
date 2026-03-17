@@ -121,16 +121,18 @@
   @include fluid-text(90, 26);
   font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -4px;
+  letter-spacing: -4%;
 
   margin-bottom: 60px;
 
   @include tablet {
     margin-bottom: 32px;
+    letter-spacing: -2%;
   }
 
   @include mobile {
     margin-bottom: 24px;
+    letter-spacing: -1%;
   }
 }
 .row-top {
@@ -182,7 +184,7 @@
   @include fluid-text(18, 14);
   line-height: 1.3;
   font-weight: 400;
-  letter-spacing: -1px;
+  letter-spacing: -1%;
   align-self: center;
   color: var(--color-grey20);
 

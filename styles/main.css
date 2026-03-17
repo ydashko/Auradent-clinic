@@ -1133,6 +1133,8 @@ body.no-scroll {
 }
 @media (width <= 47.99875rem) {
   .services {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 70px;
     gap: 16px;
   }
@@ -2126,8 +2128,14 @@ body.no-scroll {
   color: #000;
 }
 
+.doctors__btn.doctors--filled:not(:disabled):hover {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
 .doctors__btn.doctors--filled:disabled {
-  background: #777;
+  background: var(--color-grey30);
   color: #fff;
 }
 
@@ -3849,17 +3857,19 @@ option {
   font-size: clamp(1.625rem, 0.2165492958rem + 6.0093896714vw, 5.625rem);
   font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -4px;
+  letter-spacing: -4%;
   margin-bottom: 60px;
 }
 @media (width <= 64.37375rem) {
   .title {
     margin-bottom: 32px;
+    letter-spacing: -2%;
   }
 }
 @media (width <= 47.99875rem) {
   .title {
     margin-bottom: 24px;
+    letter-spacing: -1%;
   }
 }
 
@@ -3915,7 +3925,7 @@ option {
   font-size: clamp(0.875rem, 0.786971831rem + 0.3755868545vw, 1.125rem);
   line-height: 1.3;
   font-weight: 400;
-  letter-spacing: -1px;
+  letter-spacing: -1%;
   align-self: center;
   color: var(--color-grey20);
 }

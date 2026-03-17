@@ -450,8 +450,14 @@
   color: #000;
 }
 
+.doctors__btn.doctors--filled:not(:disabled):hover {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
 .doctors__btn.doctors--filled:disabled {
-  background: #777;
+  background: var(--color-grey30);
   color: #fff;
 }
 
