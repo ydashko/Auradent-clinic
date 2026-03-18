@@ -102,6 +102,12 @@ export function initDoctors() {
   const dragStart = (e) => {
     if (!isMobile()) return;
 
+    const targetCard = e.target.closest(".doctor-card");
+    if (targetCard && targetCard.classList.contains("active")) {
+      isDragging = false; // блокируем свайп слайдера
+      return;
+    }
+
     isDragging = true;
     isMoved = false; // сброс
     startX = getPositionX(e);
