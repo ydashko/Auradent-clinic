@@ -12,6 +12,12 @@
   }
 }
 
+.price:first-child {
+  @include tablet {
+    padding-top: 32px;
+  }
+}
+
 .price {
   border-bottom: 1.5px solid var(--color-grey10);
   padding: 18px 0;
@@ -126,12 +132,12 @@
   margin-bottom: 60px;
 
   @include tablet {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     letter-spacing: -2%;
   }
 
   @include mobile {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -1%;
   }
 }
@@ -190,10 +196,12 @@
 
   @include tablet {
     min-width: 600px;
+    margin-bottom: 32px;
   }
 
   @include mobile {
     min-width: 300px;
+    margin-bottom: 32px;
   }
 }
 

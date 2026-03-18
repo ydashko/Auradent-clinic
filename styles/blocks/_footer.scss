@@ -35,9 +35,9 @@
     &:not(:last-child) {
       margin-bottom: 16px;
 
-      @include tablet {
-        margin-bottom: 4px;
-      }
+      // @include tablet {
+      //   margin-bottom: 4px;
+      // }
     }
   }
 

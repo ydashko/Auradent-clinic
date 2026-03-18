@@ -1148,6 +1148,10 @@ body.no-scroll {
   font-weight: 600;
 }
 
+.services ul {
+  margin-bottom: 0;
+}
+
 .service {
   position: relative;
   display: flex;
@@ -2308,11 +2312,6 @@ body.no-scroll {
 }
 .footer__plaque:not(:last-child) {
   margin-bottom: 16px;
-}
-@media (width <= 64.37375rem) {
-  .footer__plaque:not(:last-child) {
-    margin-bottom: 4px;
-  }
 }
 .footer .footer__title {
   font-size: clamp(1rem, 0.9559859155rem + 0.1877934272vw, 1.125rem);
@@ -3754,6 +3753,12 @@ option {
   }
 }
 
+@media (width <= 64.37375rem) {
+  .price:first-child {
+    padding-top: 32px;
+  }
+}
+
 .price {
   border-bottom: 1.5px solid var(--color-grey10);
   padding: 18px 0;
@@ -3862,13 +3867,13 @@ option {
 }
 @media (width <= 64.37375rem) {
   .title {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     letter-spacing: -2%;
   }
 }
 @media (width <= 47.99875rem) {
   .title {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -1%;
   }
 }
@@ -3932,11 +3937,13 @@ option {
 @media (width <= 64.37375rem) {
   .small--tablet {
     min-width: 600px;
+    margin-bottom: 32px;
   }
 }
 @media (width <= 47.99875rem) {
   .small--tablet {
     min-width: 300px;
+    margin-bottom: 32px;
   }
 }
 
