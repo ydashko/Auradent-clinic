@@ -2137,7 +2137,6 @@ body.no-scroll {
   border: 2px solid var(--color-gold);
   background: transparent;
   color: var(--color-gold);
-  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
 }
