@@ -2121,6 +2121,7 @@ body.no-scroll {
   .doctors__controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 24px;
     margin-top: 20px;
   }
@@ -2136,7 +2137,6 @@ body.no-scroll {
   border: 2px solid var(--color-gold);
   background: transparent;
   color: var(--color-gold);
-  fill: currentColor;
   font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
