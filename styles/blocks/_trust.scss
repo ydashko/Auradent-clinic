@@ -227,6 +227,16 @@
       height: 16px;
       flex-shrink: 0;
 
+      @include tablet {
+        width: 14px;
+        height: 14px;
+      }
+
+      @include mobile {
+        width: 12px;
+        height: 12px;
+      }
+
       background-color: currentColor;
 
       mask: url("../icons/arrow-bottom-right.svg") center/contain no-repeat;
