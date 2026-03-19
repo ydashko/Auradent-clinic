@@ -184,6 +184,90 @@
   }
 }
 
+// .works__btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 58px;
+//   height: 58px;
+
+//   border-radius: 50%;
+//   border: 2px solid var(--color-gold);
+
+//   background: transparent;
+
+//   color: var(--color-gold);
+//   fill: currentColor;
+
+//   font-size: 22px;
+//   cursor: pointer;
+//   transition: 0.2s;
+
+//   @include mobile {
+//     width: 44px;
+//     height: 44px;
+//   }
+
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+// // .works__btn svg {
+// //   width: 24px;
+// //   height: 24px;
+// //   fill: currentColor;
+// // }
+
+// .works__btn--prev {
+//   transform: scale(-1, 1);
+// }
+
+// // .works__btn button svg path {
+// //   stroke: currentColor;
+// //   // width: 24px;
+// //   // height: 24px;
+// //   // display: block;
+// // }
+
+// /* DISABLED */
+
+// .works__btn:disabled {
+//   border-color: var(--color-grey30);
+//   color: var(--color-grey30);
+//   fill: var(--color-grey30);
+//   cursor: default;
+// }
+
+// .works--filled .works__btn {
+//   border: none;
+//   background: var(--color-gold);
+//   color: #000;
+// }
+
+// .works--filled .works__btn:disabled {
+//   background: var(--color-grey30);
+//   color: #fff;
+// }
+
+// /* OUTLINE → FILLED */
+
+// .works__btn:not(:disabled):hover {
+//   background: var(--color-gold);
+//   border-color: var(--color-gold);
+//   color: #000;
+// }
+
+// /* FILLED → OUTLINE */
+
+// .works--filled .works__btn:not(:disabled):hover {
+//   background: transparent;
+//   border: 2px solid var(--color-gold);
+//   color: var(--color-gold);
+// }
+
 .works__btn {
   display: flex;
   align-items: center;
@@ -198,9 +282,7 @@
   background: transparent;
 
   color: var(--color-gold);
-  fill: currentColor;
 
-  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
 
@@ -213,33 +295,42 @@
     width: 24px;
     height: 24px;
   }
-}
 
-// .works__btn svg {
-//   width: 24px;
-//   height: 24px;
-//   fill: currentColor;
-// }
+  svg path {
+    stroke: currentColor;
+    fill: none; // ✅ ключевой фикс
+  }
+}
 
 .works__btn--prev {
   transform: scale(-1, 1);
 }
-
-// .works__btn button svg path {
-//   stroke: currentColor;
-//   // width: 24px;
-//   // height: 24px;
-//   // display: block;
-// }
 
 /* DISABLED */
 
 .works__btn:disabled {
   border-color: var(--color-grey30);
   color: var(--color-grey30);
-  fill: var(--color-grey30);
   cursor: default;
+
+  svg path {
+    stroke: var(--color-grey30);
+  }
 }
+
+/* ========================= */
+/* OUTLINE → FILLED (hover) */
+/* ========================= */
+
+.works__btn:not(:disabled):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
+}
+
+/* ========================= */
+/* FILLED MODE */
+/* ========================= */
 
 .works--filled .works__btn {
   border: none;
@@ -250,17 +341,13 @@
 .works--filled .works__btn:disabled {
   background: var(--color-grey30);
   color: #fff;
+
+  svg path {
+    stroke: #fff;
+  }
 }
 
-/* OUTLINE → FILLED */
-
-.works__btn:not(:disabled):hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #000;
-}
-
-/* FILLED → OUTLINE */
+/* FILLED → OUTLINE (hover) */
 
 .works--filled .works__btn:not(:disabled):hover {
   background: transparent;

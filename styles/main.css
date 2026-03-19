@@ -3044,8 +3044,6 @@ option {
   border: 2px solid var(--color-gold);
   background: transparent;
   color: var(--color-gold);
-  fill: currentColor;
-  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -3059,6 +3057,10 @@ option {
   width: 24px;
   height: 24px;
 }
+.works__btn svg path {
+  stroke: currentColor;
+  fill: none;
+}
 
 .works__btn--prev {
   transform: scale(-1, 1);
@@ -3068,10 +3070,24 @@ option {
 .works__btn:disabled {
   border-color: var(--color-grey30);
   color: var(--color-grey30);
-  fill: var(--color-grey30);
   cursor: default;
 }
+.works__btn:disabled svg path {
+  stroke: var(--color-grey30);
+}
 
+/* ========================= */
+/* OUTLINE → FILLED (hover) */
+/* ========================= */
+.works__btn:not(:disabled):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
+}
+
+/* ========================= */
+/* FILLED MODE */
+/* ========================= */
 .works--filled .works__btn {
   border: none;
   background: var(--color-gold);
@@ -3082,15 +3098,11 @@ option {
   background: var(--color-grey30);
   color: #fff;
 }
-
-/* OUTLINE → FILLED */
-.works__btn:not(:disabled):hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #000;
+.works--filled .works__btn:disabled svg path {
+  stroke: #fff;
 }
 
-/* FILLED → OUTLINE */
+/* FILLED → OUTLINE (hover) */
 .works--filled .works__btn:not(:disabled):hover {
   background: transparent;
   border: 2px solid var(--color-gold);
