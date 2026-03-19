@@ -2147,11 +2147,13 @@ body.no-scroll {
     height: 44px;
   }
 }
-
 .doctors__btn svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
+}
+.doctors__btn svg path {
+  stroke: currentColor;
+  fill: none;
 }
 
 .doctors__btn--prev {
