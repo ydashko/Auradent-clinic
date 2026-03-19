@@ -1498,25 +1498,6 @@ body.no-scroll {
   }
 }
 
-.reviews-nav button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 1px solid var(--color-gold);
-  background: transparent;
-  color: var(--color-gold);
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.reviews-nav button svg {
-  width: 24px;
-  height: 24px;
-}
-
 .reviews-slider {
   overflow: hidden;
   position: relative;
@@ -1701,6 +1682,22 @@ body.no-scroll {
     height: 18px;
   }
 }
+.reviews-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+@media (width <= 64.37375rem) {
+  .reviews-nav {
+    gap: 24px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .reviews-nav {
+    gap: 16px;
+  }
+}
+
 .reviews-nav button {
   display: flex;
   align-items: center;
@@ -1711,10 +1708,29 @@ body.no-scroll {
   border: 2px solid var(--color-gold);
   background: transparent;
   color: var(--color-gold);
-  fill: currentColor;
-  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
+}
+.reviews-nav button svg {
+  width: 24px;
+  height: 24px;
+}
+.reviews-nav button svg path {
+  stroke: currentColor;
+  fill: none;
+}
+.reviews-nav button:disabled {
+  border-color: var(--color-grey30);
+  color: var(--color-grey30);
+  cursor: default;
+}
+.reviews-nav button:disabled svg path {
+  stroke: var(--color-grey30);
+}
+.reviews-nav button:not(:disabled):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
 }
 @media (width <= 47.99875rem) {
   .reviews-nav button {
@@ -1723,34 +1739,8 @@ body.no-scroll {
   }
 }
 
-.reviews-nav button svg {
-  width: 24px;
-  height: 24px;
-}
-
-.reviews-nav button svg path {
-  stroke: currentColor;
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
 .reviews-nav .prev {
   transform: scale(-1, 1);
-}
-
-.reviews-nav button:disabled {
-  border-color: var(--color-grey30);
-  color: var(--color-grey30);
-  fill: var(--color-grey30);
-  cursor: default;
-}
-
-/* OUTLINE → FILLED */
-.reviews-nav button:not(:disabled):hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #000;
 }
 
 /* анимация для заголовка */

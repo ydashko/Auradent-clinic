@@ -71,27 +71,6 @@
   }
 }
 
-.reviews-nav button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 1px solid var(--color-gold);
-  background: transparent;
-  color: var(--color-gold);
-  font-size: 18px;
-  cursor: pointer;
-
-  transition: 0.2s;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
 .reviews-slider {
   overflow: hidden;
   position: relative;
@@ -297,6 +276,99 @@
   }
 }
 
+// .reviews-nav button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 45px;
+//   height: 45px;
+//   border-radius: 50%;
+//   border: 1px solid var(--color-gold);
+//   background: transparent;
+//   color: var(--color-gold);
+//   font-size: 18px;
+//   cursor: pointer;
+
+//   transition: 0.2s;
+
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+// .reviews-nav button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 58px;
+//   height: 58px;
+
+//   border-radius: 50%;
+//   border: 2px solid var(--color-gold);
+
+//   background: transparent;
+
+//   color: var(--color-gold);
+//   fill: currentColor;
+
+//   font-size: 22px;
+//   cursor: pointer;
+//   transition: 0.2s;
+
+//   @include mobile {
+//     width: 44px;
+//     height: 44px;
+//   }
+// }
+
+// .reviews-nav button svg {
+//   width: 24px;
+//   height: 24px;
+//   // fill: currentColor;
+// }
+
+// .reviews-nav button svg path {
+//   stroke: currentColor;
+//   width: 24px;
+//   height: 24px;
+//   display: block;
+// }
+
+// .reviews-nav .prev {
+//   transform: scale(-1, 1);
+// }
+
+// .reviews-nav button:disabled {
+//   border-color: var(--color-grey30);
+//   color: var(--color-grey30);
+//   fill: var(--color-grey30);
+//   cursor: default;
+// }
+
+// /* OUTLINE → FILLED */
+
+// .reviews-nav button:not(:disabled):hover {
+//   background: var(--color-gold);
+//   border-color: var(--color-gold);
+//   color: #000;
+// }
+
+.reviews-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  @include tablet {
+    gap: 24px;
+  }
+
+  @include mobile {
+    gap: 16px;
+  }
+}
+
 .reviews-nav button {
   display: flex;
   align-items: center;
@@ -311,11 +383,35 @@
   background: transparent;
 
   color: var(--color-gold);
-  fill: currentColor;
 
-  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  svg path {
+    stroke: currentColor;
+    fill: none; // ✅ фикс для мобилки
+  }
+
+  &:disabled {
+    border-color: var(--color-grey30);
+    color: var(--color-grey30);
+    cursor: default;
+
+    svg path {
+      stroke: var(--color-grey30);
+    }
+  }
+
+  &:not(:disabled):hover {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #000;
+  }
 
   @include mobile {
     width: 44px;
@@ -323,36 +419,8 @@
   }
 }
 
-.reviews-nav button svg {
-  width: 24px;
-  height: 24px;
-  // fill: currentColor;
-}
-
-.reviews-nav button svg path {
-  stroke: currentColor;
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
 .reviews-nav .prev {
   transform: scale(-1, 1);
-}
-
-.reviews-nav button:disabled {
-  border-color: var(--color-grey30);
-  color: var(--color-grey30);
-  fill: var(--color-grey30);
-  cursor: default;
-}
-
-/* OUTLINE → FILLED */
-
-.reviews-nav button:not(:disabled):hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #000;
 }
 
 /* анимация для заголовка */
