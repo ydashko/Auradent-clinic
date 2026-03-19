@@ -2159,36 +2159,50 @@ body.no-scroll {
   transform: scale(-1, 1);
 }
 
+/* ========================= */
 /* DISABLED */
+/* ========================= */
 .doctors__btn:disabled {
   border-color: var(--color-grey30);
   color: var(--color-grey30);
-  fill: var(--color-grey30);
   cursor: default;
 }
+.doctors__btn:disabled svg path {
+  stroke: var(--color-grey30);
+}
 
+/* ========================= */
+/* OUTLINE → FILLED (hover) */
+/* ========================= */
+.doctors__btn:not(:disabled):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
+}
+
+/* ========================= */
+/* FILLED (как у тебя — класс на кнопке) */
+/* ========================= */
 .doctors__btn.doctors--filled {
   border: none;
   background: var(--color-gold);
   color: #000;
 }
-.doctors__btn.doctors--filled svg path {
-  stroke: currentColor;
-  fill: none;
-}
 
-.doctors__btn.doctors--filled:not(:disabled):hover {
-  background: transparent;
-  border: 2px solid var(--color-gold);
-  color: var(--color-gold);
-}
-
+/* disabled для filled */
 .doctors__btn.doctors--filled:disabled {
   background: var(--color-grey30);
   color: #fff;
 }
 .doctors__btn.doctors--filled:disabled svg path {
   stroke: #fff;
+}
+
+/* FILLED → OUTLINE (hover) */
+.doctors__btn.doctors--filled:not(:disabled):hover {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
 }
 
 .works__header {

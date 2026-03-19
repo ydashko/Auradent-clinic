@@ -389,6 +389,102 @@
   }
 }
 
+// .doctors__btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 58px;
+//   height: 58px;
+
+//   border-radius: 50%;
+//   border: 2px solid var(--color-gold);
+
+//   background: transparent;
+
+//   color: var(--color-gold);
+//   // fill: currentColor;
+
+//   // font-size: 22px;
+//   cursor: pointer;
+//   transition: 0.2s;
+
+//   @include mobile {
+//     width: 44px;
+//     height: 44px;
+//   }
+
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//   }
+
+//   svg path {
+//     stroke: currentColor;
+//     fill: none; // ✅ ключевой фикс
+//   }
+// }
+
+// // .doctors__btn svg {
+// //   width: 24px;
+// //   height: 24px;
+// //   fill: currentColor;
+// // }
+
+// .doctors__btn--prev {
+//   transform: scale(-1, 1);
+// }
+
+// /* DISABLED */
+
+// .doctors__btn:disabled {
+//   border-color: var(--color-grey30);
+//   color: var(--color-grey30);
+//   fill: var(--color-grey30);
+//   cursor: default;
+
+//   svg path {
+//     stroke: var(--color-grey30);
+//   }
+// }
+
+// // .doctors--filled .doctors__btn {
+// //   border: none;
+// //   background: #f3c06b;
+// //   color: #000;
+// // }
+
+// // .doctors--filled .doctors__btn:disabled {
+// //   background: #777;
+// //   color: #fff;
+// // }
+
+// .doctors__btn.doctors--filled {
+//   border: none;
+//   background: var(--color-gold);
+//   color: #000;
+
+//   svg path {
+//     stroke: currentColor;
+//     fill: none; // ✅ ключевой фикс
+//   }
+// }
+
+// .doctors__btn.doctors--filled:not(:disabled):hover {
+//   background: transparent;
+//   border: 2px solid var(--color-gold);
+//   color: var(--color-gold);
+// }
+
+// .doctors__btn.doctors--filled:disabled {
+//   background: var(--color-grey30);
+//   color: #fff;
+
+//   svg path {
+//     stroke: #fff;
+//   }
+// }
+
 .doctors__btn {
   display: flex;
   align-items: center;
@@ -403,9 +499,7 @@
   background: transparent;
 
   color: var(--color-gold);
-  // fill: currentColor;
 
-  // font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
 
@@ -421,56 +515,49 @@
 
   svg path {
     stroke: currentColor;
-    fill: none; // ✅ ключевой фикс
+    fill: none; // ✅ фикс для мобилки
   }
 }
-
-// .doctors__btn svg {
-//   width: 24px;
-//   height: 24px;
-//   fill: currentColor;
-// }
 
 .doctors__btn--prev {
   transform: scale(-1, 1);
 }
 
+/* ========================= */
 /* DISABLED */
+/* ========================= */
 
 .doctors__btn:disabled {
   border-color: var(--color-grey30);
   color: var(--color-grey30);
-  fill: var(--color-grey30);
   cursor: default;
+
+  svg path {
+    stroke: var(--color-grey30);
+  }
 }
 
-// .doctors--filled .doctors__btn {
-//   border: none;
-//   background: #f3c06b;
-//   color: #000;
-// }
+/* ========================= */
+/* OUTLINE → FILLED (hover) */
+/* ========================= */
 
-// .doctors--filled .doctors__btn:disabled {
-//   background: #777;
-//   color: #fff;
-// }
+.doctors__btn:not(:disabled):hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
+}
+
+/* ========================= */
+/* FILLED (как у тебя — класс на кнопке) */
+/* ========================= */
 
 .doctors__btn.doctors--filled {
   border: none;
   background: var(--color-gold);
   color: #000;
-
-  svg path {
-    stroke: currentColor;
-    fill: none; // ✅ ключевой фикс
-  }
 }
 
-.doctors__btn.doctors--filled:not(:disabled):hover {
-  background: transparent;
-  border: 2px solid var(--color-gold);
-  color: var(--color-gold);
-}
+/* disabled для filled */
 
 .doctors__btn.doctors--filled:disabled {
   background: var(--color-grey30);
@@ -479,6 +566,14 @@
   svg path {
     stroke: #fff;
   }
+}
+
+/* FILLED → OUTLINE (hover) */
+
+.doctors__btn.doctors--filled:not(:disabled):hover {
+  background: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
 }
 
 .works__header {
