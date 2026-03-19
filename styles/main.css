@@ -2173,6 +2173,10 @@ body.no-scroll {
   background: var(--color-gold);
   color: #000;
 }
+.doctors__btn.doctors--filled svg path {
+  stroke: currentColor;
+  fill: none;
+}
 
 .doctors__btn.doctors--filled:not(:disabled):hover {
   background: transparent;
@@ -2183,6 +2187,9 @@ body.no-scroll {
 .doctors__btn.doctors--filled:disabled {
   background: var(--color-grey30);
   color: #fff;
+}
+.doctors__btn.doctors--filled:disabled svg path {
+  stroke: #fff;
 }
 
 .works__header {

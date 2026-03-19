@@ -458,6 +458,11 @@
   border: none;
   background: var(--color-gold);
   color: #000;
+
+  svg path {
+    stroke: currentColor;
+    fill: none; // ✅ ключевой фикс
+  }
 }
 
 .doctors__btn.doctors--filled:not(:disabled):hover {
@@ -469,6 +474,10 @@
 .doctors__btn.doctors--filled:disabled {
   background: var(--color-grey30);
   color: #fff;
+
+  svg path {
+    stroke: #fff;
+  }
 }
 
 .works__header {
