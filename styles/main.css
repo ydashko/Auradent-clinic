@@ -1499,6 +1499,9 @@ body.no-scroll {
 }
 
 .reviews-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1507,6 +1510,11 @@ body.no-scroll {
   color: var(--color-gold);
   font-size: 18px;
   cursor: pointer;
+  transition: 0.2s;
+}
+.reviews-nav button svg {
+  width: 24px;
+  height: 24px;
 }
 
 .reviews-slider {
@@ -3063,18 +3071,8 @@ option {
   height: 24px;
 }
 
-.works__btn svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
 .works__btn--prev {
   transform: scale(-1, 1);
-}
-
-.works__btn button svg path {
-  stroke: currentColor;
 }
 
 /* DISABLED */
