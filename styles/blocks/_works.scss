@@ -208,9 +208,14 @@
     width: 44px;
     height: 44px;
   }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.works__btn svg path {
+.works__btn svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
@@ -218,6 +223,13 @@
 
 .works__btn--prev {
   transform: scale(-1, 1);
+}
+
+.works__btn button svg path {
+  stroke: currentColor;
+  // width: 24px;
+  // height: 24px;
+  // display: block;
 }
 
 /* DISABLED */
