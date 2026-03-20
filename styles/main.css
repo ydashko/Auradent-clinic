@@ -2614,6 +2614,12 @@ body.no-scroll {
   }
 }
 
+.form__inner.is-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .appointment-form {
   display: flex;
   flex-direction: column;
@@ -2841,6 +2847,19 @@ option {
 
 .form__success {
   display: none;
+}
+
+.form__success.show {
+  display: flex;
+}
+
+.form__inner.is-success .form__image,
+.form__inner.is-success .appointment-form {
+  display: none;
+}
+
+.form__inner.is-success .form__success {
+  display: flex;
 }
 
 .form__success.show {
