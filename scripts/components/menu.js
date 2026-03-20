@@ -29,11 +29,17 @@ export function initMenu() {
 
   function openMenu() {
     dialog.showModal();
+    dialog.classList.add("is-open");
     document.body.classList.add("no-scroll");
   }
 
   function closeMenu() {
     dialog.close();
+    document.body.classList.remove("no-scroll");
+
+    dialog.addEventListener("transitionend", () => dialog.close(), {
+      once: true,
+    });
     document.body.classList.remove("no-scroll");
   }
 
