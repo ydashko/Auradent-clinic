@@ -8,7 +8,7 @@
     <link rel="icon" href="./icons/logo.svg" />
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
 
@@ -1996,7 +1996,9 @@
               required
             />
 
-            <label for="reason">Причина звернення (необов’язково)</label>
+            <label for="reason" name="reason"
+              >Причина звернення (необов’язково)</label
+            >
             <textarea
               id="reason"
               placeholder="Наприклад: біль у зубі, профілактичний огляд…"
@@ -2005,15 +2007,30 @@
             ></textarea>
 
             <label for="doctor">Оберіть лікаря (необов’язково)</label>
+
             <select id="doctor" name="doctor">
-              <option value="">Вибрати лікаря</option>
-              <option value="snizko">Сніжко Владислав Олександрович</option>
-              <option value="liaskovec">Лясковець Марія Юріївна</option>
-              <option value="moroz">Мороз Євген Миколайович</option>
-              <option value="nazarenko">Назаренко Євгеній Юрійович</option>
-              <option value="kocur">Коцур Олександр Олегович</option>
-              <option value="yaroviy">Яровий Денис Віталійович</option>
-              <option value="tartachna">Тартачна Юлія Вікторівна</option>
+              <option value="" disabled selected hidden>Вибрати лікаря</option>
+              <option value="Сніжко Владислав Олександрович">
+                Сніжко Владислав Олександрович
+              </option>
+              <option value="Лясковець Марія Юріївна">
+                Лясковець Марія Юріївна
+              </option>
+              <option value="Мороз Євген Миколайович">
+                Мороз Євген Миколайович
+              </option>
+              <option value="Назаренко Євгеній Юрійович">
+                Назаренко Євгеній Юрійович
+              </option>
+              <option value="Коцур Олександр Олегович">
+                Коцур Олександр Олегович
+              </option>
+              <option value="Яровий Денис Віталійович">
+                Яровий Денис Віталійович
+              </option>
+              <option value="Тартачна Юлія Вікторівна">
+                Тартачна Юлія Вікторівна
+              </option>
             </select>
 
             <input type="text" name="company" style="display: none" />

@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.80.6"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
   }
 }

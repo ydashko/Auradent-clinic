@@ -235,6 +235,21 @@ select {
   // }
 }
 
+select {
+  appearance: none; /* убирает стандартный стиль */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: url("../../icons/form-icon.svg") no-repeat right 10px center;
+  background-size: 18px;
+  // color: var(--color-grey30);
+}
+
+/* когда выбрано НЕ пустое значение */
+// select.selected {
+//   color: var(--color-white);
+// }
+
 label {
   @include fluid-text(24, 18);
   display: block;

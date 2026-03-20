@@ -2718,6 +2718,15 @@ select:focus {
   border-color: var(--color-gold);
 }
 
+select {
+  appearance: none; /* убирает стандартный стиль */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../../icons/form-icon.svg") no-repeat right 10px center;
+  background-size: 18px;
+}
+
+/* когда выбрано НЕ пустое значение */
 label {
   font-size: clamp(1.125rem, 0.9929577465rem + 0.5633802817vw, 1.5rem);
   display: block;
