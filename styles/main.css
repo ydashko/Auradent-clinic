@@ -3657,16 +3657,19 @@ option {
   width: 318px;
   height: 82px;
 }
+.error__logo__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 @media (width <= 64.37375rem) {
   .error__logo {
     width: 256px;
-    height: 66px;
   }
 }
 @media (width <= 47.99875rem) {
   .error__logo {
     width: 174px;
-    height: 45px;
   }
 }
 .error__btn--primary {
