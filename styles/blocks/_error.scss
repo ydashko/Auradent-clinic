@@ -50,7 +50,7 @@
 
   &__logo {
     width: 318px;
-    height: 82px;
+    // height: 82px;
 
     &__logo img {
       width: 100%;
@@ -60,12 +60,12 @@
 
     @include tablet {
       width: 256px;
-      height: 66px;
+      // height: 66px;
     }
 
     @include mobile {
       width: 174px;
-      height: 45px;
+      // height: 45px;
     }
   }
 
