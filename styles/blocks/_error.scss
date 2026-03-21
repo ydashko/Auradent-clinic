@@ -60,12 +60,12 @@
 
     @include tablet {
       width: 256px;
-      // height: 66px;
+      height: 66px;
     }
 
     @include mobile {
       width: 174px;
-      // height: 45px;
+      height: 45px;
     }
   }
 
