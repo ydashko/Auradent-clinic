@@ -3,22 +3,18 @@
 .cross-button {
   @include reset-button;
   @include square(44px);
-
   position: relative;
   border-radius: var(--border-radius-small);
-
   &::before,
   &::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 24px;
     height: 2px;
     background-color: var(--color-white);
     border-radius: 5px;
-
     transform-origin: center;
   }
 

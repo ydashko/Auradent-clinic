@@ -75,7 +75,6 @@
     width: 100px;
     height: 31px;
     padding: 4px 38px;
-
     font-size: 18px;
     font-weight: 500;
     bottom: 8px;
@@ -87,7 +86,6 @@
     width: 54px;
     height: 22px;
     padding: 2px 17px;
-
     bottom: 4px;
   }
 }
@@ -113,7 +111,6 @@
     width: 100px;
     height: 31px;
     padding: 4px 26px;
-
     bottom: 8px;
   }
 
@@ -123,7 +120,6 @@
     width: 54px;
     height: 22px;
     padding: 2px 8px;
-
     bottom: 4px;
   }
 }
@@ -150,7 +146,6 @@
   color: var(--color-grey10);
   text-transform: none;
   margin-top: 0;
-  // margin-bottom: 42px;
 
   @include tablet {
     font-weight: 400;
@@ -164,7 +159,6 @@
 
 .works__controls {
   display: flex;
-  // align-items: center;
   justify-content: center;
   gap: 32px;
 
@@ -188,17 +182,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 58px;
   height: 58px;
-
   border-radius: 50%;
   border: 2px solid var(--color-gold);
-
   background: transparent;
-
   color: var(--color-gold);
-
   cursor: pointer;
   transition: 0.2s;
 
@@ -214,15 +203,13 @@
 
   svg path {
     stroke: currentColor;
-    fill: none; // ✅ ключевой фикс
+    fill: none;
   }
 }
 
 .works__btn--prev {
   transform: scale(-1, 1);
 }
-
-/* DISABLED */
 
 .works__btn:disabled {
   border-color: var(--color-grey30);
@@ -234,19 +221,11 @@
   }
 }
 
-/* ========================= */
-/* OUTLINE → FILLED (hover) */
-/* ========================= */
-
 .works__btn:not(:disabled):hover {
   background: var(--color-gold);
   border-color: var(--color-gold);
   color: #000;
 }
-
-/* ========================= */
-/* FILLED MODE */
-/* ========================= */
 
 .works--filled .works__btn {
   border: none;
@@ -255,7 +234,7 @@
 
   svg path {
     stroke: currentColor;
-    fill: none; // ✅ ключевой фикс
+    fill: none;
   }
 }
 
@@ -267,8 +246,6 @@
     stroke: #fff;
   }
 }
-
-/* FILLED → OUTLINE (hover) */
 
 .works--filled .works__btn:not(:disabled):hover {
   background: transparent;
@@ -340,10 +317,6 @@
 .works__image img {
   transition: transform 0.6s ease;
 }
-
-// .works__image:hover img {
-//   transform: scale(2);
-// }
 
 .animate-on-scroll {
   opacity: 0;

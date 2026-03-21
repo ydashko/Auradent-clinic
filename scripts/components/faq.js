@@ -1,4 +1,3 @@
-// components/faq.js
 export function initFaq() {
   document.querySelectorAll(".faq").forEach((faq) => {
     const wrapper = faq.querySelector(".faq__answer-wrapper");

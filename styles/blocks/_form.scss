@@ -1,9 +1,6 @@
 @use "../helpers" as *;
 
 .form {
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
   min-height: 550px;
   margin-bottom: 140px;
 
@@ -24,14 +21,9 @@
   }
 
   &__inner {
-    // display: flex;
-    // // justify-content: center;
-    // height: 100%;
     gap: 24px;
-
     display: grid;
     grid-template-columns: 420px 1fr;
-    // width: 100%;
     align-items: stretch;
 
     @include tablet {
@@ -47,17 +39,9 @@
   &__image {
     height: 100%;
     object-fit: cover;
-    // max-width: 427px;
-    // max-height: 529px;
     width: 420px;
-    // width: 100%;
-    // max-height: 529px;
     height: 100%;
-    // object-fit: contain;
-
     border-radius: 5px;
-    // flex-grow: 1;
-    // object-fit: cover;
 
     @include tablet {
       object-fit: cover;
@@ -77,79 +61,22 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  // height: 100%;
-  // background: #fff;
-
-  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  // align-self: center;
 }
 
-// .appointment-form input,
-// .appointment-form textarea,
-// .appointment-form .doctor-select {
-//   width: 100%;
-//   padding: 12px;
-//   margin-bottom: 16px;
-//   border-radius: 6px;
-//   border: 1px solid #ccc;
-//   font-size: 16px;
-//   box-sizing: border-box;
-// }
-
 .appointment-form textarea {
-  // resize: vertical;
   resize: none;
-  // height: auto;
   height: 50px;
   overflow: hidden;
 }
 
-// .appointment-form button {
-//   width: 100%;
-//   // padding: 14px;
-//   // background: #007bff;
-//   // color: #fff;
-//   // font-size: 16px;
-//   // border: none;
-//   // border-radius: 8px;
-//   // cursor: pointer;
-//   // transition: 0.3s;
-
-//   display: inline-block;
-//   // background: transparent;
-//   background-color: var(--color-gold);
-//   color: #000;
-//   border: 2px solid var(--accent);
-//   padding: 10px 24px;
-//   // color: var(--accent);
-//   border-radius: 40px;
-//   cursor: pointer;
-//   font-weight: 600;
-
-//   //toggle
-//   // background: transparent;
-// }
-
-// .appointment-form button:hover {
-//   background: transparent;
-//   // background-color: var(--color-gold);
-//   // color: #000;
-//   color: var(--color-white);
-// }
-
 .form__btn--secondary {
   margin-top: 40px;
-
-  // width: 253px;
   width: 100%;
   min-height: 58px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   white-space: nowrap;
-
   padding: 0 24px;
   border: 2px solid var(--color-gold);
   background-color: var(--color-gold);
@@ -159,25 +86,19 @@
   font-weight: 600;
   color: #000;
   text-decoration: none;
-
   transition: all 0.3s ease;
-  // margin-bottom: 92px;
 
   @include tablet {
     padding: 0 12px;
     min-height: 50px;
-    // margin-bottom: 82px;
     font-weight: 500;
     margin-top: 24px;
   }
 
   @include mobile {
-    // min-width: 218px;
     width: 100%;
     min-height: 44px;
-    // margin-bottom: 39px;
   }
-  //old
 }
 
 .form__btn--secondary:hover {
@@ -185,7 +106,6 @@
   background: none;
 }
 
-/* Кастомний випадаючий список */
 .dropdown {
   position: relative;
 }
@@ -234,33 +154,20 @@ select {
     outline: none;
     border-color: var(--color-gold);
   }
-
-  // &:invalid {
-  //   outline: none;
-  //   border-color: var(--color-eror);
-  // }
 }
 
 select {
-  appearance: none; /* убирает стандартный стиль */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   background: url("../../icons/form-icon.svg") no-repeat right 10px center;
   background-size: 18px;
-  // color: var(--color-grey30);
 }
-
-/* когда выбрано НЕ пустое значение */
-// select.selected {
-//   color: var(--color-white);
-// }
 
 label {
   @include fluid-text(24, 18);
   display: block;
   margin-bottom: 4px;
-  // font-size: 14px;
   color: var(--color-white);
 }
 
@@ -274,7 +181,6 @@ option {
   font-size: 14px;
   color: var(--color-grey30);
   line-height: 1.4;
-
   text-align: center;
 
   a {
@@ -288,18 +194,15 @@ option {
 }
 
 .form__success {
-  display: none; // скрыто по умолчанию
+  display: none;
   height: 100%;
-  // background: #4b4b4b; // как на скрине
   color: #fff;
   border-radius: 6px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   padding: 40px;
 }
 
@@ -314,7 +217,6 @@ option {
   position: absolute;
   border-radius: 50%;
   background: rgba(244, 184, 96, 0.25);
-  // animation: pulse 2s infinite ease-in-out;
 }
 
 .ring-1 {
@@ -352,8 +254,6 @@ option {
   font-weight: bold;
   color: #000;
 }
-
-//redo styles
 
 @keyframes pulse {
   0% {
@@ -400,7 +300,6 @@ option {
   display: flex;
 }
 
-/* Исходное состояние для всех элементов */
 .form__title,
 .form__image,
 .appointment-form,
@@ -412,13 +311,11 @@ option {
     transform 0.6s ease;
 }
 
-/* Класс для включения анимации */
 .is-animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Можно задать индивидуальные задержки через CSS-переменные или JS */
 .form__title.is-animated {
   transition-delay: 0s;
 }

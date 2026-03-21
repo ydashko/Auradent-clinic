@@ -1,4 +1,3 @@
-// components/footer.js
 export function initFooter() {
   const footer = document.querySelector(".footer");
   if (!footer) return;

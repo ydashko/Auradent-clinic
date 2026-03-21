@@ -1,7 +1,6 @@
 @use "../helpers" as *;
 
 .doctors {
-  // padding: 60px 20px;
   margin-bottom: 140px;
 
   @include tablet {
@@ -83,7 +82,6 @@
   border-bottom: 1px solid var(--color-grey20);
   padding: 30px 0;
   margin-bottom: 40px;
-
   display: flex;
   flex-direction: column;
 
@@ -93,9 +91,7 @@
 
   @include tablet {
     min-width: 100%;
-    // padding: 20px;
     padding: 16px 0;
-
     border-bottom: none;
   }
 
@@ -117,12 +113,9 @@
 .doctor-card__main {
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr;
-  // grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1.2fr);
-  // column-gap: clamp(12px, 4vw, 96px);
-  // gap: 16px;
 
   @include tablet {
-    grid-template-columns: 1fr 1fr; // ← ВОТ ТАК
+    grid-template-columns: 1fr 1fr;
     align-items: stretch;
     grid-template-rows: auto auto 1fr auto;
     gap: 16;
@@ -139,11 +132,8 @@
 .doctor-card__name-block {
   margin-right: 32px;
   @include tablet {
-    // grid-column: 1 / 2;
-
     grid-column: 1;
     grid-row: 1;
-    // height: 150px;
     margin-right: 0;
   }
 }
@@ -152,18 +142,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  // margin-left: 32px;
   justify-content: flex-start;
   margin-right: 40px;
 
   @include tablet {
-    // grid-column: 1 / 2;
-    // margin-left: 0;
     margin-right: 0;
-
     grid-column: 1;
     grid-row: 2 / 5;
-
     display: flex;
     flex-direction: column;
   }
@@ -182,7 +167,7 @@
     margin-bottom: 20px;
   }
 }
-//из-за размера шрифта длинные очества косят след столбец
+
 .doctor-card__name {
   @include fluid-text(40, 20);
 
@@ -191,7 +176,6 @@
   line-height: 1.1;
   letter-spacing: -1%;
   color: var(--color-white);
-
   margin: 0;
   margin-bottom: 16px;
 }
@@ -231,21 +215,11 @@
 }
 
 .doctor-card__photo img {
-  // width: 100%;
-  // border-radius: 20px;
-
-  // @include mobile {
-  //   // order: -1;
-  // }
-
   width: 100%;
   height: 100%;
-  // height: auto;
   border-radius: 15px;
   object-fit: cover;
   display: block;
-
-  // margin-left: 32px;
 
   @include tablet {
     margin-left: 16px;
@@ -257,45 +231,26 @@
 }
 
 .doctor-card__toggle {
-  // margin-top: 25px;
-  // padding: 12px 28px;
-  // background: #f3c06b;
-  // border: none;
-  // cursor: pointer;
-  // font-size: 16px;
   @include fluid-text(18, 14);
-
   font-weight: 600;
   color: var(--color-gold);
-
-  // margin-top: 25px;
   padding: 14px 36px;
   border-radius: 40px;
   border: 2px solid var(--color-gold);
   background: transparent;
-  // color: #f3c06b;
   cursor: pointer;
   transition: 0.3s;
-
   margin-top: auto;
 
   @include tablet {
     font-weight: 500;
   }
-
-  // @include mobile {
-  //   font-weight: 500;
-  // }
 }
 
 .doctor-card__toggle:hover {
   color: #000;
   background-color: var(--color-gold);
 }
-
-/*
-   EXPAND
-*/
 
 .doctor-card__expand {
   height: 0;
@@ -308,7 +263,6 @@
 }
 
 .doctor-card.active .doctor-card__expand {
-  // max-height: 100%;
   max-height: 1130px;
 }
 
@@ -352,7 +306,6 @@
 .doctor-card__expand-inner {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  // gap: 40px;
   margin-top: 40px;
 
   @include tablet {
@@ -366,17 +319,6 @@
   }
 }
 
-// .doctor-card__expand-top {
-//   display: flex;
-// }
-
-// .doctor-card__expand-bottom {
-// }
-
-/*
-   MOBILE SLIDER
-*/
-
 .doctors__controls {
   display: none;
 
@@ -389,115 +331,15 @@
   }
 }
 
-// .doctors__btn {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   width: 58px;
-//   height: 58px;
-
-//   border-radius: 50%;
-//   border: 2px solid var(--color-gold);
-
-//   background: transparent;
-
-//   color: var(--color-gold);
-//   // fill: currentColor;
-
-//   // font-size: 22px;
-//   cursor: pointer;
-//   transition: 0.2s;
-
-//   @include mobile {
-//     width: 44px;
-//     height: 44px;
-//   }
-
-//   svg {
-//     width: 24px;
-//     height: 24px;
-//   }
-
-//   svg path {
-//     stroke: currentColor;
-//     fill: none; // ✅ ключевой фикс
-//   }
-// }
-
-// // .doctors__btn svg {
-// //   width: 24px;
-// //   height: 24px;
-// //   fill: currentColor;
-// // }
-
-// .doctors__btn--prev {
-//   transform: scale(-1, 1);
-// }
-
-// /* DISABLED */
-
-// .doctors__btn:disabled {
-//   border-color: var(--color-grey30);
-//   color: var(--color-grey30);
-//   fill: var(--color-grey30);
-//   cursor: default;
-
-//   svg path {
-//     stroke: var(--color-grey30);
-//   }
-// }
-
-// // .doctors--filled .doctors__btn {
-// //   border: none;
-// //   background: #f3c06b;
-// //   color: #000;
-// // }
-
-// // .doctors--filled .doctors__btn:disabled {
-// //   background: #777;
-// //   color: #fff;
-// // }
-
-// .doctors__btn.doctors--filled {
-//   border: none;
-//   background: var(--color-gold);
-//   color: #000;
-
-//   svg path {
-//     stroke: currentColor;
-//     fill: none; // ✅ ключевой фикс
-//   }
-// }
-
-// .doctors__btn.doctors--filled:not(:disabled):hover {
-//   background: transparent;
-//   border: 2px solid var(--color-gold);
-//   color: var(--color-gold);
-// }
-
-// .doctors__btn.doctors--filled:disabled {
-//   background: var(--color-grey30);
-//   color: #fff;
-
-//   svg path {
-//     stroke: #fff;
-//   }
-// }
-
 .doctors__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 58px;
   height: 58px;
-
   border-radius: 50%;
   border: 2px solid var(--color-gold);
-
   background: transparent;
-
   color: var(--color-gold);
 
   cursor: pointer;
@@ -515,17 +357,13 @@
 
   svg path {
     stroke: currentColor;
-    fill: none; // ✅ фикс для мобилки
+    fill: none;
   }
 }
 
 .doctors__btn--prev {
   transform: scale(-1, 1);
 }
-
-/* ========================= */
-/* DISABLED */
-/* ========================= */
 
 .doctors__btn:disabled {
   border-color: var(--color-grey30);
@@ -537,27 +375,17 @@
   }
 }
 
-/* ========================= */
-/* OUTLINE → FILLED (hover) */
-/* ========================= */
-
 .doctors__btn:not(:disabled):hover {
   background: var(--color-gold);
   border-color: var(--color-gold);
   color: #000;
 }
 
-/* ========================= */
-/* FILLED (как у тебя — класс на кнопке) */
-/* ========================= */
-
 .doctors__btn.doctors--filled {
   border: none;
   background: var(--color-gold);
   color: #000;
 }
-
-/* disabled для filled */
 
 .doctors__btn.doctors--filled:disabled {
   background: var(--color-grey30);
@@ -567,8 +395,6 @@
     stroke: #fff;
   }
 }
-
-/* FILLED → OUTLINE (hover) */
 
 .doctors__btn.doctors--filled:not(:disabled):hover {
   background: transparent;
@@ -617,44 +443,33 @@
 }
 
 .doctors__btn--secondary {
-  // margin-top: 32px;
-
   width: 323px;
   min-height: 58px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   white-space: nowrap;
-
   padding: 0 24px;
   border: 2px solid var(--color-gold);
   background-color: var(--color-gold);
   border-radius: 50px;
-
   @include fluid-text(18, 14);
   font-weight: 600;
   color: #000;
   text-decoration: none;
-
   transition: all 0.3s ease;
-  // margin-bottom: 92px;
 
   @include tablet {
     padding: 0 12px;
     min-height: 50px;
-    // margin-bottom: 82px;
     font-weight: 500;
   }
 
   @include mobile {
-    // min-width: 218px;
     width: 100%;
     min-height: 44px;
-    // margin-bottom: 39px;
   }
-  //old
 }
 
 .doctors__btn--secondary::after {
@@ -662,12 +477,9 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-
   background-color: currentColor;
-
   mask: url("../icons/arrow-bottom-right.svg") center/contain no-repeat;
   -webkit-mask: url("../icons/arrow-bottom-right.svg") center/contain no-repeat;
-
   transition: transform 0.3s ease;
 }
 
@@ -682,8 +494,6 @@
 .doctors__bottom {
   display: flex;
   justify-content: center;
-  // margin-top: 32px;
-
   margin-bottom: 140px;
 
   @include tablet {

@@ -1,4 +1,3 @@
-// components/aboutSlider.js
 export function initAboutSlider() {
   const slider = document.querySelector(".about-slider");
   if (slider) {
@@ -45,7 +44,6 @@ export function initAboutSlider() {
 
     updateSlider();
 
-    // DRAG / SWIPE
     let startX = 0;
     let dragging = false;
 

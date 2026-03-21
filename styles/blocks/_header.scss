@@ -59,7 +59,6 @@
     @include fluid-text(18);
     line-height: 1.3;
     font-weight: 400;
-    // letter-spacing: 0;
   }
 
   &__line {
@@ -78,7 +77,6 @@
     }
 
     &--center {
-      // text-align: center;
       margin-left: 35%;
       color: var(--color-gold);
 
@@ -104,7 +102,6 @@
 
   &__info {
     display: flex;
-
     justify-content: space-between;
     border-top: 1px solid var(--color-white);
 
@@ -137,7 +134,6 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     padding: 0 24px;
     border: 2px solid var(--color-gold);
     background-color: var(--color-gold);
@@ -147,7 +143,6 @@
     font-weight: 600;
     color: #000;
     text-decoration: none;
-
     transition: 0.3s;
     margin-bottom: 92px;
 
@@ -181,11 +176,9 @@
     }
 
     background-color: currentColor;
-
     mask: url("../icons/arrow-bottom-right.svg") center/contain no-repeat;
     -webkit-mask: url("../icons/arrow-bottom-right.svg") center/contain
       no-repeat;
-
     transform: rotate(0deg);
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }

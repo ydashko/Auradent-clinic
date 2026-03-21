@@ -5,12 +5,10 @@
   @include square(44px);
   background: none;
   color: var(--color-white);
-
   position: relative;
 
   &::after {
     @include abs-center;
-
     content: "";
     width: 50%;
     height: 2px;

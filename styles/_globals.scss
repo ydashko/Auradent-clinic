@@ -1,7 +1,7 @@
 @use "helpers" as *;
 
 body {
-  @include fluid-text(24, 14); //letter spacing -0.03em, -0.01em;
+  @include fluid-text(24, 14);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,6 @@ h6,
 h1,
 .h1 {
   @include fluid-text(120, 40);
-
-  //   line-height: 1;
 }
 h2,
 .h2 {
@@ -51,28 +49,6 @@ h2,
 
   line-height: 1.2;
 }
-// h3,
-// .h3 {
-//   @include fluid-text(40, 20);
-//   line-height: 1;
-// }
-// h4,
-// .h4 {
-//   @include fluid-text(32, 18);
-//   line-height: 1.1;
-// }
-// h5,
-// .h5 {
-//   @include fluid-text(24, 18);
-//   line-height: 1.4;
-// }
-// h6,
-// .h6 {
-//   @include fluid-text(20, 16);
-//   line-height: 1;
-//   color: var(--color-white);
-//   font-weight: 500;
-// }
 
 a,
 button,

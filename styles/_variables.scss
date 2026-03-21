@@ -23,19 +23,6 @@
 
   --container-width: #{rem(1320)};
   --container-padding-x: #{rem(60)};
-
-  // @media (tablet) {
-  //   --container-padding-x: 32px; /* больше на мобильных */
-  // }
-
-  // @media (mobile) {
-  //   --container-padding-x: 16px; /* ещё аккуратнее */
-  // }
-
-  // @include tablet {
-  //   --container-width: #{rem(680)};
-  // }
-  // --transition-duration: 0.2s;
 }
 
 @include tablet {

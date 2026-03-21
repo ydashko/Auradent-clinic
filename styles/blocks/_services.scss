@@ -4,7 +4,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
   margin-bottom: 140px;
 
   @include tablet {
@@ -40,12 +39,10 @@
   justify-content: space-between;
   padding: 0;
   cursor: pointer;
-
   transition: 0.3s ease;
 
   @include mobile {
     margin-bottom: 4px;
-    // height: 143px;
     height: 143px;
   }
 
@@ -53,10 +50,8 @@
     flex: 0 0 25%;
     max-width: 250px;
     aspect-ratio: 4 / 3;
-
     overflow: hidden;
     border-radius: 15px;
-
     opacity: 0;
     transform: translateX(-10px);
     transition: 0.3s ease;
@@ -120,7 +115,6 @@
       color 0.25s ease,
       transform 0.3s ease;
     margin-bottom: 28px;
-
     max-width: 28ch;
 
     @include tablet {
@@ -140,7 +134,6 @@
     color: var(--color-grey20);
     margin-top: auto;
     margin-bottom: 28px;
-
     max-width: 48ch;
 
     @include tablet {
@@ -149,7 +142,6 @@
     }
 
     @include mobile {
-      // margin-top: 8px;
       margin: 0;
       transition: opacity 0.3s ease;
     }
@@ -159,11 +151,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
     border-radius: 16px;
-
     height: 135px;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -229,7 +218,6 @@
 
 .services__line-2 {
   margin-left: 10%;
-
   white-space: nowrap;
 
   @include tablet {
@@ -249,14 +237,12 @@
   }
 }
 
-/* заголовок */
 .services__line {
   opacity: 0;
   transform: translateY(35px);
 }
 
 .section--animated {
-  /* заголовок */
   .services__line-1 {
     animation: fadeUp 0.6s ease forwards;
   }
@@ -267,7 +253,6 @@
     animation: fadeUp 0.6s ease 0.3s forwards;
   }
 
-  /* карточки */
   .service:nth-child(1) {
     animation: fadeUp 0.5s ease 0.35s forwards;
   }
@@ -289,6 +274,4 @@
   .service:nth-child(7) {
     animation: fadeUp 0.5s ease 0.95s forwards;
   }
-
-  /* изображения НЕ трогаем! */
 }

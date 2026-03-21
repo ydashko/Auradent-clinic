@@ -27,20 +27,11 @@
   }
 
   &__plaque {
-    // margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     margin-bottom: 16px;
-
-    // &:not(:last-child) {
-    //   margin-bottom: 16px;
-
-    //   // @include tablet {
-    //   //   margin-bottom: 4px;
-    //   // }
-    // }
   }
 
   & &__title {

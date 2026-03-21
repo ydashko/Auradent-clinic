@@ -49,15 +49,8 @@
   }
 
   &__logo {
-    // background: url("../../images/logo-footer.svg") no-repeat center / contain;
     width: 318px;
     height: 82px;
-
-    &__logo img {
-      // width: 100%;
-      // height: auto;
-      // display: block;
-    }
 
     @include tablet {
       width: 256px;
@@ -77,7 +70,6 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     padding: 12px 24px;
     border: 2px solid var(--color-gold);
     background-color: var(--color-gold);
@@ -87,7 +79,6 @@
     font-weight: 600;
     color: #000;
     text-decoration: none;
-
     transition: 0.3s;
     margin-bottom: 33px;
 
@@ -106,13 +97,10 @@
     content: "";
     width: 16px;
     height: 16px;
-
     background-color: currentColor;
-
     mask: url("../icons/arrow-bottom-right.svg") center/contain no-repeat;
     -webkit-mask: url("../icons/arrow-bottom-right.svg") center/contain
       no-repeat;
-
     transition: transform 0.3s ease;
   }
 

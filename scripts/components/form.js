@@ -14,34 +14,21 @@ export function initForm() {
     emailjs.init("RnkPcapm77yZE_TXM");
   }
 
-  // =========================
-  // 🔒 Антиспам переменные
-  // =========================
   let lastSubmitTime = 0;
   const formStartTime = Date.now();
 
-  // =========================
-  // 🧼 sanitize
-  // =========================
   function sanitize(str) {
     return str.replace(/[<>]/g, "");
   }
 
-  // =========================
-  // 📱 валидация телефона
-  // =========================
   function validatePhone(phone) {
     const cleaned = phone.replace(/\D/g, "");
 
-    // строго украинский формат
     if (!cleaned.startsWith("380")) return false;
 
     return cleaned.length === 12;
   }
 
-  // =========================
-  // 📱 Маска телефона (улучшена)
-  // =========================
   if (phoneInput) {
     phoneInput.addEventListener("input", function () {
       let value = this.value.replace(/\D/g, "");
@@ -65,22 +52,16 @@ export function initForm() {
     });
   }
 
-  // =========================
-  // 🚀 Отправка формы
-  // =========================
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    // honeypot
     if (form.company && form.company.value !== "") return;
 
-    // ⏱ антибот (слишком быстро)
     if (Date.now() - formStartTime < 3000) {
       alert("Занадто швидко 😉");
       return;
     }
 
-    // ⛔ антифлуд
     if (Date.now() - lastSubmitTime < 15000) {
       alert("Зачекайте перед повторною відправкою");
       return;
@@ -88,18 +69,15 @@ export function initForm() {
 
     lastSubmitTime = Date.now();
 
-    // 📱 проверка телефона
     const phoneValue = form.phone.value;
     if (!validatePhone(phoneValue)) {
       alert("Некоректний номер телефону");
       return;
     }
 
-    // 🧼 sanitize
     form.name.value = sanitize(form.name.value);
     form.reason.value = sanitize(form.reason.value);
 
-    // стандартная валидация
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
@@ -116,7 +94,6 @@ export function initForm() {
 
         successBlock.classList.add("show");
 
-        // анимация появления
         setTimeout(() => {
           successBlock.classList.add("is-animated");
         }, 50);
@@ -133,9 +110,6 @@ export function initForm() {
       });
   });
 
-  // =========================
-  // ✨ Анимация появления
-  // =========================
   const formSection = document.querySelector("#appointment");
   if (!formSection) return;
 

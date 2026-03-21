@@ -26,7 +26,6 @@ export function initWorksSlider() {
       updateSlider();
     });
 
-    // drag/swipe
     let startX = 0,
       dragging = false;
 

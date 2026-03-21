@@ -1,7 +1,4 @@
 export function initDoctors() {
-  // ======================================================
-  // 1️⃣ Toggle карточек докторов
-  // ======================================================
   const doctorCards = document.querySelectorAll(".doctor-card");
   const toggleButtons = document.querySelectorAll(".doctor-card__toggle");
   let isMoved = false;
@@ -9,7 +6,6 @@ export function initDoctors() {
   if (doctorCards.length && toggleButtons.length) {
     toggleButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        // 👇 ФИКС: если был свайп — блокируем клик
         if (isMoved) {
           e.preventDefault();
           return;
@@ -40,9 +36,7 @@ export function initDoctors() {
       });
     });
   }
-  // ======================================================
-  // 2️⃣ Mobile Doctors Slider
-  // ======================================================
+
   const track = document.querySelector(".doctors__track");
   const cards = document.querySelectorAll(".doctor-card");
   const prevBtn = document.querySelector(".doctors__btn--prev");
@@ -87,11 +81,7 @@ export function initDoctors() {
     nextBtn.disabled = currentIndex === cards.length - 1;
   }
 
-  // ======================================================
-  // 3️⃣ DRAG / SWIPE (FIXED)
-  // ======================================================
   let isDragging = false;
-  // let isMoved = false; // 👈 фикс клика
   let startX = 0;
   let currentTranslate = 0;
   let prevTranslate = 0;
@@ -104,12 +94,12 @@ export function initDoctors() {
 
     const targetCard = e.target.closest(".doctor-card");
     if (targetCard && targetCard.classList.contains("active")) {
-      isDragging = false; // блокируем свайп слайдера
+      isDragging = false;
       return;
     }
 
     isDragging = true;
-    isMoved = false; // сброс
+    isMoved = false;
     startX = getPositionX(e);
 
     const style = window.getComputedStyle(track);
@@ -125,7 +115,6 @@ export function initDoctors() {
     const currentX = getPositionX(e);
     const delta = currentX - startX;
 
-    // 👇 фикс: считаем что это свайп только если реально двигались
     if (Math.abs(delta) > 5) {
       isMoved = true;
     }
@@ -162,13 +151,11 @@ export function initDoctors() {
     track.style.transition = "transform 0.3s ease";
     updateSlider();
 
-    // 👇 важно сбросить
     setTimeout(() => {
       isMoved = false;
     }, 0);
   };
 
-  // события
   track.addEventListener("mousedown", dragStart);
   track.addEventListener("touchstart", dragStart);
 
@@ -179,15 +166,12 @@ export function initDoctors() {
   track.addEventListener("mouseleave", dragEnd);
   track.addEventListener("touchend", dragEnd);
 
-  requestAnimationFrame(updateSlider); // ✅ FIX: корректный первый рендер
-  window.addEventListener("load", updateSlider); // ✅ FIX: страховка после загрузки
+  requestAnimationFrame(updateSlider);
+  window.addEventListener("load", updateSlider);
 
-  // ======================================================
-  // 4️⃣ КНОПКИ (FIX: были удалены)
-  // ======================================================
   nextBtn.addEventListener("click", () => {
     if (currentIndex < cards.length - 1) {
-      closeAllCards(); // WHY: чтобы не тянуло открытую карточку
+      closeAllCards();
       currentIndex++;
       updateSlider();
     }
@@ -195,7 +179,7 @@ export function initDoctors() {
 
   prevBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
-      closeAllCards(); // WHY: та же логика
+      closeAllCards();
       currentIndex--;
       updateSlider();
     }
