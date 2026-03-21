@@ -3655,20 +3655,18 @@ option {
 }
 .error__logo {
   width: 318px;
-}
-.error__logo__logo img {
-  width: 100%;
-  height: auto;
-  display: block;
+  height: 82px;
 }
 @media (width <= 64.37375rem) {
   .error__logo {
     width: 256px;
+    height: 66px;
   }
 }
 @media (width <= 47.99875rem) {
   .error__logo {
     width: 174px;
+    height: 45px;
   }
 }
 .error__btn--primary {

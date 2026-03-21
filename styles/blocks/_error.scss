@@ -49,23 +49,24 @@
   }
 
   &__logo {
+    // background: url("../../images/logo-footer.svg") no-repeat center / contain;
     width: 318px;
-    // height: 82px;
+    height: 82px;
 
     &__logo img {
-      width: 100%;
-      height: auto;
-      display: block;
+      // width: 100%;
+      // height: auto;
+      // display: block;
     }
 
     @include tablet {
       width: 256px;
-      // height: 66px;
+      height: 66px;
     }
 
     @include mobile {
       width: 174px;
-      // height: 45px;
+      height: 45px;
     }
   }
 
