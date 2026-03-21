@@ -52,6 +52,17 @@ export function initMenu() {
   function closeMenu() {
     dialog.classList.remove("is-open");
 
+    // сброс анимаций
+    const animatedItems = dialog.querySelectorAll(
+      ".tablet-overlay__item, .tablet-overlay__footer, .tablet-overlay__header",
+    );
+
+    animatedItems.forEach((el) => {
+      el.style.animation = "none";
+      el.offsetHeight; // reflow
+      el.style.animation = "";
+    });
+
     dialog.addEventListener(
       "transitionend",
       () => {
