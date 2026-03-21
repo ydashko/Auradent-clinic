@@ -8,6 +8,7 @@
     <link rel="icon" href="./icons/favicon.svg" />
 
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
   <body>
@@ -127,6 +128,106 @@
             </div>
           </div>
         </div>
+
+        <div class="container form" id="appointment">
+        <h2 class="form__title">
+          <span>Будемо раді </span><span></span
+          ><span class="word-accent">бачити вас</span> на прийомі
+        </h2>
+
+        <div class="form__inner">
+          <img
+            class="form__image hidden-mobile"
+            src="./images/form.webp"
+            alt=""
+          />
+          <form class="appointment-form" id="appointment-form">
+            <label for="name">Ім’я та прізвище</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Введіть ваше прізвище та ім’я"
+              maxlength="60"
+              required
+            />
+
+            <label for="phone">Номер телефону</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+38 (___) ___-__-__"
+              maxlength="19"
+              required
+            />
+
+            <label for="reason" name="reason"
+              >Причина звернення (необов’язково)</label
+            >
+            <textarea
+              id="reason"
+              placeholder="Наприклад: біль у зубі, профілактичний огляд…"
+              name="reason"
+              maxlength="180"
+            ></textarea>
+
+            <label for="doctor">Оберіть лікаря (необов’язково)</label>
+
+            <select id="doctor" name="doctor">
+              <option value="" disabled selected hidden>Вибрати лікаря</option>
+              <option value="Сніжко Владислав Олександрович">
+                Сніжко Владислав Олександрович
+              </option>
+              <option value="Лясковець Марія Юріївна">
+                Лясковець Марія Юріївна
+              </option>
+              <option value="Мороз Євген Миколайович">
+                Мороз Євген Миколайович
+              </option>
+              <option value="Назаренко Євгеній Юрійович">
+                Назаренко Євгеній Юрійович
+              </option>
+              <option value="Коцур Олександр Олегович">
+                Коцур Олександр Олегович
+              </option>
+              <option value="Яровий Денис Віталійович">
+                Яровий Денис Віталійович
+              </option>
+              <option value="Тартачна Юлія Вікторівна">
+                Тартачна Юлія Вікторівна
+              </option>
+            </select>
+
+            <input type="text" name="company" style="display: none" />
+            <button class="form__btn--secondary" type="submit">
+              Записатись на прийом
+            </button>
+
+            <p class="form__privacy">
+              Натискаючи кнопку, я надаю згоду на використання моїх даних згідно
+              <a href="./policy.html" target="_blank"
+                >Політики конфіденційності</a
+              >
+            </p>
+          </form>
+
+          <div class="form__success" id="form-success">
+            <div class="success-icon">
+              <span class="ring ring-1"></span>
+              <span class="ring ring-2"></span>
+              <span class="ring ring-3"></span>
+              <div class="checkmark">✓</div>
+            </div>
+
+            <p class="success-text">
+              Дякуємо, що обрали нашу клініку.<br />
+              Ми вже отримали вашу заявку! Найближчим часом адміністратор
+              зателефонує, щоб уточнити деталі візиту.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">

@@ -1,14 +1,18 @@
 // import emailjs from "@emailjs/browser";
 
 export function initForm() {
-  emailjs.init("RnkPcapm77yZE_TXM");
-
   const form = document.getElementById("appointment-form");
+
+  if (!form) return;
   const successBlock = document.getElementById("form-success");
   const phoneInput = document.getElementById("phone");
   const formInner = form.closest(".form__inner");
 
   if (!form) return;
+
+  if (typeof emailjs !== "undefined") {
+    emailjs.init("RnkPcapm77yZE_TXM");
+  }
 
   // =========================
   // 🔒 Антиспам переменные
