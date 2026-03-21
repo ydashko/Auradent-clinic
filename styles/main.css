@@ -804,7 +804,7 @@ body.no-scroll {
 .tablet-overlay {
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .tablet-overlay.is-open {
   opacity: 1;

@@ -6,49 +6,32 @@
     text-transform: uppercase;
     list-style: none;
     margin-bottom: auto;
-    // padding: 19px 12px;
-
-    //drop default padding
     padding: 0;
     gap: 8px;
-    // gap: 56px;
+
     @media (max-width: 1250px) {
-      // font-size: 14px;
       gap: 4px;
     }
 
     @media (max-width: 1130px) {
-      // font-size: 14px;
       gap: 2px;
     }
-    // @media (max-width: 1150px) {
-    //   gap: 28px;
-    // }
-    // @media (max-width: 1090px) {
-    //   gap: 18px; // }
   }
 
   &__link {
-    // @include fluid-text(18);
     font-size: 18px;
     font-weight: 600;
     padding: 19px 12px;
     white-space: nowrap;
 
     @media (max-width: 1130px) {
-      // font-size: 16px;
       padding: 10px 6px;
     }
 
     @media (max-width: 1100px) {
-      // font-size: 16px;
       padding: 5px 3px;
     }
   }
-
-  // &__item {
-  //   @include fluid-text(18);
-  // }
 
   &--header {
     @include tablet {
@@ -70,8 +53,8 @@
   opacity: 0;
   transform: translateY(-20px);
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    opacity 0.2s ease,
+    transform 0.2s ease;
 
   &.is-open {
     opacity: 1;
