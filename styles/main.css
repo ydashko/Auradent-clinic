@@ -2713,7 +2713,7 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../../icons/form-icon.svg") no-repeat right 10px center;
+  background: url("../icons/form-icon.svg") no-repeat right 10px center;
   background-size: 18px;
 }
 
