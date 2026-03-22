@@ -2759,51 +2759,112 @@ option {
 
 .success-icon {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
   margin-bottom: 30px;
+}
+@media (width <= 64.37375rem) {
+  .success-icon {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .success-icon {
+    width: 170px;
+    height: 170px;
+  }
 }
 
 .ring {
   position: absolute;
   border-radius: 50%;
   background: rgba(244, 184, 96, 0.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ring-1 {
-  width: 120px;
-  height: 120px;
-  left: 0px;
+  width: 250px;
+  height: 250px;
+}
+@media (width <= 64.37375rem) {
+  .ring-1 {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .ring-1 {
+    width: 170px;
+    height: 170px;
+  }
 }
 
 .ring-2 {
-  width: 90px;
-  height: 90px;
-  top: 15px;
-  left: 15px;
+  width: 150px;
+  height: 150px;
+}
+@media (width <= 64.37375rem) {
+  .ring-2 {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .ring-2 {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .ring-3 {
-  width: 60px;
-  height: 60px;
-  top: 30px;
-  left: 30px;
+  width: 100px;
+  height: 100px;
+}
+@media (width <= 64.37375rem) {
+  .ring-3 {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .ring-3 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .checkmark {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 30px;
-  left: 30px;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--color-gold);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   color: #000;
+}
+@media (width <= 64.37375rem) {
+  .checkmark {
+    width: 75px;
+    height: 75px;
+    font-size: 26px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .checkmark {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
 }
 
 @keyframes pulse {
