@@ -3914,6 +3914,7 @@ option {
   font-size: clamp(1.25rem, 0.8098591549rem + 1.8779342723vw, 2.5rem);
   text-transform: uppercase;
   font-weight: 600;
+  padding-right: 8px;
 }
 .price__icon {
   width: 32px;
@@ -3981,6 +3982,7 @@ option {
 
 .price__answear span:first-child {
   min-width: 0;
+  padding-right: 8px;
 }
 
 .price__answear span:last-child {

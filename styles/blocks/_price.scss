@@ -39,6 +39,7 @@
     @include fluid-text(40, 20);
     text-transform: uppercase;
     font-weight: 600;
+    padding-right: 8px;
   }
 
   &__icon {
@@ -109,6 +110,7 @@
 
 .price__answear span:first-child {
   min-width: 0;
+  padding-right: 8px;
 }
 
 .price__answear span:last-child {
