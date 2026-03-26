@@ -3583,6 +3583,17 @@ option {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 140px;
+}
+@media (width <= 64.37375rem) {
+  .error {
+    margin-bottom: 100px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .error {
+    margin-bottom: 70px;
+  }
 }
 .error__title {
   font-size: clamp(1.25rem, 0.8098591549rem + 1.8779342723vw, 2.5rem);
@@ -3623,6 +3634,7 @@ option {
 .error__text {
   margin-bottom: 24px;
   overflow-wrap: break-word;
+  text-align: center;
 }
 @media (width <= 64.37375rem) {
   .error__text {
