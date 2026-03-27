@@ -3712,6 +3712,38 @@ option {
   background-image: none;
 }
 
+.priceupdate__title {
+  font-size: clamp(1.25rem, 0.8098591549rem + 1.8779342723vw, 2.5rem);
+  margin-top: 140px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+@media (width <= 64.37375rem) {
+  .priceupdate__title {
+    margin-top: 100px;
+    margin-bottom: 16px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .priceupdate__title {
+    margin-top: 70px;
+    margin-bottom: 8px;
+  }
+}
+
+.priceupdate__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
+  max-width: 622px;
+  text-align: center;
+}
+@media (width <= 64.37375rem) {
+  .priceupdate__text {
+    margin-bottom: 16px;
+  }
+}
+
 .contacts__header {
   font-size: clamp(1.625rem, 0.2165492958rem + 6.0093896714vw, 5.625rem);
   line-height: 1.1;

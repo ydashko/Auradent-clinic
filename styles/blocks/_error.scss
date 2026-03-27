@@ -135,3 +135,34 @@
 .secondary-page {
   background-image: none;
 }
+
+.priceupdate__title {
+  @include fluid-text(40, 20);
+  margin-top: 140px;
+  margin-bottom: 24px;
+
+  text-align: center;
+
+  @include tablet {
+    margin-top: 100px;
+    margin-bottom: 16px;
+  }
+
+  @include mobile {
+    margin-top: 70px;
+    margin-bottom: 8px;
+  }
+}
+
+.priceupdate__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
+  max-width: 622px;
+
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+}
