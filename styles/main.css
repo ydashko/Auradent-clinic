@@ -3598,6 +3598,7 @@ option {
   font-size: clamp(1.25rem, 0.8098591549rem + 1.8779342723vw, 2.5rem);
   margin-top: 140px;
   margin-bottom: 48px;
+  text-align: center;
 }
 @media (width <= 64.37375rem) {
   .error__title {
