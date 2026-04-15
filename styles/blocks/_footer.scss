@@ -114,6 +114,17 @@
   padding-top: 8px;
 }
 
+.extra__icon--phones {
+  padding-top: 0;
+}
+
+.extra__phones {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
 .menu--footer__link {
   font-size: 18px;
   font-weight: 600;
@@ -155,14 +166,16 @@
   }
 
   .extra__icon--left,
-  .extra__icon--right {
+  .extra__icon--right,
+  .extra__icon--phones {
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
   }
 
   .extra__icon--left:hover,
-  .extra__icon--right:hover {
+  .extra__icon--right:hover,
+  .extra__icon--phones:hover {
     transform: scale(1.2);
     opacity: 0.8;
   }
